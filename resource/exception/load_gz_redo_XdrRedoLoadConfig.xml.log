@@ -1,0 +1,16 @@
+2020-12-01 14:53:18,450 DEBUG [XdrDecoder] [Executor task launch worker-3] #isValidDB
+2020-12-01 14:53:18,450 DEBUG [XdrDecoder] [Executor task launch worker-3] #xdrDetail.flag == Constans.XDR_FLAG_NORMAL
+2020-12-01 14:53:18,450 DEBUG [XdrDecoder] [Executor task launch worker-3] Store.dbIndex:0
+2020-12-01 14:53:18,450 DEBUG [XdrDecoder] [Executor task launch worker-3] #curNS:Store0.dr_sms_0_20201201;lastNS:Store0.dr_sms_0_20201201
+2020-12-01 14:53:18,450 DEBUG [XdrDecoder] [Executor task launch worker-3] ###onReadLine end!
+2020-12-01 14:53:18,450 DEBUG [XdrDecoder] [Executor task launch worker-3] #tail beginIndex:5389 endIndex:5389
+2020-12-01 14:53:18,450 DEBUG [XdrDecoder] [Executor task launch worker-3] #tail:
+2020-12-01 14:53:18,450 DEBUG [XdrDecoder] [Executor task launch worker-3] #run one. count:1
+2020-12-01 14:53:18,450 DEBUG [XdrDecoder] [Executor task launch worker-3] #filepoint2:5389
+2020-12-01 14:53:18,450 DEBUG [XdrDecoder] [Executor task launch worker-3] ###onSectionEnd start!
+2020-12-01 14:53:18,450 DEBUG [XdrDecoder] [Executor task launch worker-3] ###insertList start!
+2020-12-01 14:53:18,450 DEBUG [XdrDecoder] [Executor task launch worker-3] ###write start!
+2020-12-01 14:53:18,450 DEBUG [XdrDecoder] [Executor task launch worker-3] #writeName:Store0.dr_sms_0_20201201
+2020-12-01 14:53:18,450 DEBUG [CommonInterface] [Executor task launch worker-3] #getOwnConn count:1
+2020-12-01 14:53:18,450 DEBUG [CommonInterface] [Executor task launch worker-3] #basetIndex:false
+2020-12-01 14:53:18,520 DEBUG [CommonInterface] [Executor task launch worker-3] insert index get error:com.mongodb.MongoWriteException: E11000 duplicate key error collection: Store0.dr_sms_0_20201201 index: _id_ dup key: { : 1 } db:Store0 coll:dr_sms_0_20201201

@@ -1,11 +1,18 @@
+from itertools import islice
+
 import mongo_writer
 import logging
 import datetime
 import os
-import time
 
 logging.basicConfig(format='%(asctime)s - %(pathname)s[line:%(lineno)d] '
                            '- %(levelness)s: %(message)s', level=logging.INFO)
+
+
+class stat_load:
+
+    def __init__(self) -> None:
+        super().__init__()
 
 
 # 查询stat入库的任务stat信息,和filepath路径下文件比对，获取需要增量处理的stat文件名和行号
@@ -41,10 +48,12 @@ def init_file_deal_dic(file_info_from_path: dict):
 
 
 # 获取对应目录下文件和最后修改时间
-def get_file_info(file_path):
+def get_file_info(file_path, file_regex):
     file_info_dic = {}
-    for name in os.listdir(file_path):
-        full_name = os.path.join(file_path, name)
+    for file_name in os.listdir(file_path):
+        if not file_name.__contains__(file_regex):
+            continue
+        full_name = os.path.join(file_path, file_name)
         logging.debug(f' full_name is {full_name}')
         if os.path.isfile(full_name):
             file_info_dic[full_name] = os.path.getmtime(full_name)
@@ -52,16 +61,28 @@ def get_file_info(file_path):
     return file_info_dic
 
 
+# # 读取stat文件中信息
+# def read_stat_info(file_name, line_index):
+#     file = open(file_name, 'r', encoding='utf-8', errors='ignore')
+#     stat_list = []
+#     for line_num, stat_line_str in enumerate(file):
+#         if line_num <= line_index:
+#             continue
+#         stat_line_str = stat_line_str.strip('\n')
+#         stat_list.append(stat_line_str)
+#         #logging.info(f'line_num is: {line_num}, stat_line_str is: {stat_line_str}')
+#     return stat_list
+
+
 # 读取stat文件中信息
 def read_stat_info(file_name, line_index):
-    file = open(file_name, 'r')
     stat_list = []
-    for line_num, stat_line_str in enumerate(file):
-        if line_num <= line_index:
-            continue
-        stat_line_str = stat_line_str.strip('\n')
-        stat_list.append(stat_line_str)
-        logging.info(f'line_num is: {line_num}, stat_line_str is: {stat_line_str}')
+    with open(file_name, 'r', encoding='utf-8', errors='ignore') as f_input:
+        for stat_line_str in islice(f_input, line_index + 1, None):
+            stat_line_str = stat_line_str.strip('\n')
+            stat_list.append(stat_line_str)
+            logging.info(f'stat_line_str is: {stat_line_str}')
+
     return stat_list
 
 
@@ -112,13 +133,13 @@ def get_date(before_day):
 
 
 # insert stat
-def insert_stat(mongo_client, stat_db_name, stat_coll_name, filename, file_modify_time):
+def insert_stat(mongo_client, stat_db_name, stat_coll_name, filename, file_modify_time_from_path):
     start_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
     status = 'start'
     line_number = '-1'
     condition = {"FileName": filename}
     doc = {"$set": {'StartTime': start_time, 'Status': status, 'FileLineNumber': line_number,
-           'FileName': filename, "FileModifyTime": file_modify_time}}
+                    'FileName': filename, "FileModifyTime": file_modify_time_from_path}}
     writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
 
 
@@ -127,7 +148,8 @@ def update_stat(mongo_client, stat_db_name, stat_coll_name, filename, line_numbe
     end_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
     status = 'finish'
     condition = {"FileName": filename}
-    doc = {"$set": {'Status': status, 'FileLineNumber': line_number, 'EndTime': end_time, "FileModifyTime": file_modify_time}}
+    doc = {"$set": {'Status': status, 'FileLineNumber': line_number, 'EndTime': end_time,
+                    "FileModifyTime": file_modify_time_from_path}}
     logging.info(f'conditon is: {condition}, doc is : {doc}')
     writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
 
@@ -151,22 +173,28 @@ if __name__ == '__main__':
     writer = mongo_writer
     client = writer.auth(username, password, mongos_host, mongos_port)
     stat_db = "test"
-    stat_coll = "emit_stat_load_stat_"+get_date(0)
+    stat_coll = "emit_stat_load_stat_" + get_date(0)
 
-    # 读文件获取stat文件信息入库
-    path = '/Users/mtr/PycharmProjects/mongoQuery/resource/emit'
-    file_info_dic_from_path = get_file_info(path)
-    file_dic = get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
-    for name, num in file_dic.items():
-        file_modify_time = file_info_dic_from_path.get(name)
-        insert_stat(client, stat_db, stat_coll, name, file_modify_time)
-        statinfo_list = read_stat_info(name, num)
-        for stat_str in statinfo_list:
-            stat_doc = combine_stat_doc(stat_str)
-            writer.conn_insertone(client, db_name, coll_name, stat_doc)
-        update_stat(client, stat_db, stat_coll, name, num + len(statinfo_list), file_modify_time)
-    print('-----')
+    # # 读文件获取stat文件信息入库
+    # path = '/Users/mtr/PycharmProjects/mongoQuery/resource/emit'
+    # regex = 'emit'
+    # file_info_dic_from_path = get_file_info(path, regex)
+    # file_dic = get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
+    # for name, num in file_dic.items():
+    #     file_modify_time = file_info_dic_from_path.get(name)
+    #     insert_stat(client, stat_db, stat_coll, name, file_modify_time)
+    #     statinfo_list = read_stat_info(name, num)
+    #     for stat_str in statinfo_list:
+    #         stat_doc = combine_stat_doc(stat_str)
+    #         writer.conn_insertone(client, db_name, coll_name, stat_doc)
+    #     update_stat(client, stat_db, stat_coll, name, num + len(statinfo_list), file_modify_time)
+    # print('-----')
 
+    # 测试read_stat_info函数
+    name = '/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt'
+    num = -1
+    statinfo_list = read_stat_info(name, num)
+    print(len(statinfo_list))
     # read_stat_info('/Users/mtr/PycharmProjects/mongoQuery/resource/xdrEmit_stat_emit33_4214_2020121619.txt', -1)
     # get_date(1)
     # get_file_info('/Users/mtr/PycharmProjects/mongoQuery/resource/')
