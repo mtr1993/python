@@ -27,7 +27,7 @@ def get_deal_file_dic(mongo_client, stat_db_name, stat_coll_name, file_info_dic)
             file_modify_time_from_stat = doc.get("FileModifyTime")
             file_line_number = doc.get("FileLineNumber")
             file_modify_time_from_path = file_info_dic.get(file_name)
-            logging.debug(f'filename is {file_name}, file_modify_time_from_stat id {file_modify_time_from_stat} '
+            logging.debug(f'filename is {file_name}, file_modify_time_from_stat is {file_modify_time_from_stat} '
                           f', file_modify_time_from_path  is {file_modify_time_from_path}， file_line_number is {file_line_number}')
             if file_modify_time_from_stat is not None and file_modify_time_from_stat == file_modify_time_from_path:
                 file_deal_dic.pop(file_name)

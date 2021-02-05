@@ -7,7 +7,9 @@ import mongo_writer
 
 def test():
     # excep_log = '2021-02-02 09:52:55,385 INFO [XdrDecoder] ' \
-    #             '[Executor task launch worker-51353] deal file:/file_dir/xdr_load/proc/load120_v65_3/online_ggprs_5g_SG_00008500_0001_20210202_117_61075718_94501_1_0.zxjf ' \
+    #             '[Executor task launch worker-51353]
+    #             deal file:/file_dir/xdr_load/proc/load120_v65_3/
+    #             online_ggprs_5g_SG_00008500_0001_20210202_117_61075718_94501_1_0.zxjf ' \
     #             'catch exception:java.lang.NullPointerException: xdr decode failed,no match for dr_type'
     excep_log = '2020-11-25 15:45:06.421 [DEBUG] [localhost-startStop-2] ' \
                 '[org.springframework.core.env.PropertySourcesPropertyResolver:81] - ' \
@@ -38,7 +40,6 @@ def excep_load_test(db_client, db, coll, log_path, file_regex, function_name):
         file_list = open(file_name, 'r', encoding='utf-8', errors='ignore')
         for exception_info in file_list:
             if not exception_info.__contains__('duplicate'):
-                excep_dic = {}
                 exception_info = exception_info.strip()
                 excep_type = excep_pattern.findall(exception_info)
                 time_info = date_pattern.findall(exception_info)
@@ -47,7 +48,7 @@ def excep_load_test(db_client, db, coll, log_path, file_regex, function_name):
                 if len(excep_type) != 0:
                     # logging.info(f'{time_info}:{excep_type}')
                     # logging.info(exception_info)
-                    update_dic(time_info[0], excep_type[0], exception_info, file_name, excep_dic, function_name)
+                    excep_dic = update_dic(time_info[0], excep_type[0], exception_info, file_name, function_name)
                     mongo_writer.conn_insertone(db_client, db, coll, excep_dic)
                     logging.info(excep_dic)
 
@@ -65,7 +66,6 @@ def combine_excep_stat(db_client, db, coll, function_name, exception_info_list, 
     # file_list = open(file_name, 'r', encoding='utf-8', errors='ignore')
     for exception_info in exception_info_list:
         if not exception_info.__contains__('duplicate'):
-            excep_dic = {}
             exception_info = exception_info.strip()
             excep_type = excep_pattern.findall(exception_info)
             time_info = date_pattern.findall(exception_info)
@@ -74,27 +74,28 @@ def combine_excep_stat(db_client, db, coll, function_name, exception_info_list, 
             if len(excep_type) != 0:
                 # logging.info(f'{time_info}:{excep_type}')
                 # logging.info(exception_info)
-                update_dic(time_info[0], excep_type[0], exception_info, file_name, excep_dic, function_name)
+                excep_dic = update_dic(time_info[0], excep_type[0], exception_info, file_name, function_name)
                 mongo_writer.conn_insertone(db_client, db, coll, excep_dic)
                 logging.info(excep_dic)
 
 
-def update_dic(time_info, excep_type, exception_info, file_name, excep_dic, function_name):
-    excep_dic.update({"ExceptionType": excep_type})
-    excep_dic.update({"ExceptionInfo": exception_info})
-    excep_dic.update({"ExceptionTime": time_info})
-    excep_dic.update({"FileName": file_name})
-    excep_dic.update({"FunctionName": function_name})
+def update_dic(time_info, excep_type, exception_info, file_name, function_name):
+    dic = dict({"ExceptionType": excep_type,
+                "ExceptionInfo": exception_info,
+                "ExceptionTime": time_info,
+                "FileName": file_name,
+                "FunctionName": function_name})
+    return dic
 
 
 # insert stat
-def insert_stat(mongo_client, stat_db_name, stat_coll_name, filename, file_modify_time):
+def insert_stat(mongo_client, stat_db_name, stat_coll_name, filename, file_modify_time_from_path):
     start_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
     status = 'start'
     line_number = '-1'
     condition = {"FileName": filename}
     doc = {"$set": {'StartTime': start_time, 'Status': status, 'FileLineNumber': line_number,
-                    'FileName': filename, "FileModifyTime": file_modify_time}}
+                    'FileName': filename, "FileModifyTime": file_modify_time_from_path}}
     writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
 
 
@@ -127,9 +128,9 @@ if __name__ == '__main__':
     # excep_load(client, db_name, coll_name, path, regex, func_name)
 
     file_info_dic_from_path = stat_load.get_file_info(path, regex)
-    file_dic = stat_load.get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
+    deal_file_dic = stat_load.get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
 
-    for name, num in file_dic.items():
+    for name, num in deal_file_dic.items():
         file_modify_time = file_info_dic_from_path.get(name)
         insert_stat(client, stat_db, stat_coll, name, file_modify_time)
         exceptinfo_list = stat_load.read_stat_info(name, num)
