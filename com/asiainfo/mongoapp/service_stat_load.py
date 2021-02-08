@@ -33,6 +33,7 @@ def test():
     logging.debug(f'result is {result}')
     service_info_list = list(result[0])
     service_info_dic = {}
+    logging.debug(f'print list interval 2 {service_info_list[1::2]}')
     for i, val in enumerate(service_info_list):
         #logging.debug(f'i is {i}, and value is {val}')
         if i % 2 == 0:
@@ -42,113 +43,100 @@ def test():
     for key, value in service_info_dic.items():
         logging.info(f'key  is {key}, and value is {value}')
     logging.debug(f'query is {service_info_dic.get("query")}')
+    logging.info(service_info_dic)
 
-def excep_load_test(db_client, db, coll, log_path, file_regex, function_name):
-    excep_pattern = re.compile(r'[A-Za-z.]*Exception')
-    date_pattern = re.compile(r'(\d{4}-\d{1,2}-\d{1,2}\s\d{1,2}:\d{1,2}:\d{1,2}[,|.]\d+)')
-    file_dic = stat_load.get_file_info(log_path, file_regex)
+
+# xdrservice日志解析入库 解析查询条件及耗时 包含整条日志
+def combine_service_stat(db_client, db, coll, function_name, service_log_list_from_path, file_name):
+    service_pattern = re.compile('(query):(.+?)\s(dr_type):(.+?)\s'
+                                 '(mergePlan):(.+?)(start time):(.+?)\s'
+                                 '(total use):\[(.*?)ms]\s(count):(.+?)\s'
+                                 '(start day):(.+),\s(end day):(.+)')
     now_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-    # logging.info(f'{file_dic}')
-    for file_name in file_dic.keys():
-        # logging.info(f'{file_name}')
-        file_list = open(file_name, 'r', encoding='utf-8', errors='ignore')
-        for exception_info in file_list:
-            if not exception_info.__contains__('duplicate'):
-                exception_info = exception_info.strip()
-                excep_type = excep_pattern.findall(exception_info)
-                time_info = date_pattern.findall(exception_info)
-                time_info = time_info if len(time_info) != 0 else now_time
-                now_time = time_info
-                if len(excep_type) != 0:
-                    # logging.info(f'{time_info}:{excep_type}')
-                    # logging.info(exception_info)
-                    excep_dic = update_dic(time_info[0], excep_type[0], exception_info, file_name, function_name)
-                    mongo_writer.conn_insertone(db_client, db, coll, excep_dic)
-                    logging.info(excep_dic)
+    for info in service_log_list_from_path:
+        if info.__contains__('query:'):
+            service_info = info.strip()
+            logging.debug(f'service_info is {service_info}')
+            service_info_list = service_pattern.findall(service_info)
+            if service_info_list is None:
+                continue
+            logging.debug(f'service_info_list is {service_info_list}')
+            service_info_list_replace = service_info_list[0][1::2]
+            logging.debug(f'service_info_list_replace is {service_info_list_replace}')
+            service_info_list = list(service_info_list_replace)
+            # 判断service_info_list长度是否等于8 进行字段列表校验
+            service_info_dic = update_dic(service_info_list, file_name, function_name)
+            logging.debug(f'service_info_dic is {service_info_dic}')
+            if service_info_dic is None:
+                continue
+            # 入库效率较低 考虑数据库性能问题 及单次插入问题，可修改为批量插入
+            mongo_writer.conn_insertone(db_client, db, coll, service_info_dic)
 
 
-# exception解析入库 解析异常类型和时间 包含异常信息的整条日志
-# 时间如果不存在 使用上一次日志时间进行替换，使用now_time初始化为系统当前时间，保存上一条日志时间
-def combine_excep_stat(db_client, db, coll, function_name, exception_info_list, file_name):
-    excep_pattern = re.compile(r'[A-Za-z.]*Exception')
-    date_pattern = re.compile(r'(\d{4}-\d{1,2}-\d{1,2}\s\d{1,2}:\d{1,2}:\d{1,2}[,|.]\d+)')
-    # file_dic = stat_load.get_file_info(log_path, file_regex)
-    now_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-    # logging.info(f'{file_dic}')
-    # for file_name in file_dic.keys():
-    # logging.info(f'{file_name}')
-    # file_list = open(file_name, 'r', encoding='utf-8', errors='ignore')
-    for exception_info in exception_info_list:
-        if not exception_info.__contains__('duplicate'):
-            exception_info = exception_info.strip()
-            excep_type = excep_pattern.findall(exception_info)
-            time_info = date_pattern.findall(exception_info)
-            time_info = time_info if len(time_info) != 0 else now_time
-            now_time = time_info
-            if len(excep_type) != 0:
-                # logging.info(f'{time_info}:{excep_type}')
-                # logging.info(exception_info)
-                excep_dic = update_dic(time_info[0], excep_type[0], exception_info, file_name, function_name)
-                mongo_writer.conn_insertone(db_client, db, coll, excep_dic)
-                logging.info(excep_dic)
-
-
-def update_dic(time_info, excep_type, exception_info, file_name, function_name):
-    dic = dict({"ExceptionType": excep_type,
-                "ExceptionInfo": exception_info,
-                "ExceptionTime": time_info,
-                "FileName": file_name,
-                "FunctionName": function_name})
+def update_dic(service_info_list, file_name, function_name):
+    dic = {}
+    try:
+        dic = dict({'Query': service_info_list[0],
+                    'DrType': service_info_list[1],
+                    'MergePlan': service_info_list[2],
+                    'StartTime': service_info_list[3],
+                    'TotalUse': int(service_info_list[4]),
+                    'Count': int(service_info_list[5]),
+                    'StartDay': service_info_list[6],
+                    'EndDay': service_info_list[7],
+                    'FileName': file_name,
+                    'FunctionName': function_name})
+    except Exception as e:
+        logging.error(f'update_dic get Exception {e}')
     return dic
 
 
-# # insert stat
-# def insert_stat(mongo_client, stat_db_name, stat_coll_name, filename, file_modify_time_from_path):
-#     start_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-#     status = 'start'
-#     line_number = '-1'
-#     condition = {"FileName": filename}
-#     doc = {"$set": {'StartTime': start_time, 'Status': status, 'FileLineNumber': line_number,
-#                     'FileName': filename, "FileModifyTime": file_modify_time_from_path}}
-#     writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
-#
-#
-# # update stat
-# def update_stat(mongo_client, stat_db_name, stat_coll_name, filename, line_number, file_modify_time_from_path):
-#     end_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-#     status = 'finish'
-#     condition = {"FileName": filename}
-#     doc = {"$set": {'Status': status, 'FileLineNumber': line_number, 'EndTime': end_time,
-#                     "FileModifyTime": file_modify_time_from_path}}
-#     logging.info(f'conditon is: {condition}, doc is : {doc}')
-#     writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
+# insert stat
+def insert_stat(mongo_client, stat_db_name, stat_coll_name, filename, file_modify_time_from_path):
+    start_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+    status = 'start'
+    line_number = '-1'
+    condition = {"FileName": filename}
+    doc = {"$set": {'StartTime': start_time, 'Status': status, 'FileLineNumber': line_number,
+                    'FileName': filename, "FileModifyTime": file_modify_time_from_path}}
+    writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
+
+
+# update stat
+def update_stat(mongo_client, stat_db_name, stat_coll_name, filename, line_number, file_modify_time_from_path):
+    end_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+    status = 'finish'
+    condition = {"FileName": filename}
+    doc = {"$set": {'Status': status, 'FileLineNumber': line_number, 'EndTime': end_time,
+                    "FileModifyTime": file_modify_time_from_path}}
+    logging.info(f'conditon is: {condition}, doc is : {doc}')
+    writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
 
 
 if __name__ == '__main__':
-    test()
-    # # 数据库认证
-    # username = 'root'
-    # password = 'root'
-    # mongos_host = '10.19.85.33'
-    # mongos_port = 34000
-    # db_name = 'test'
-    # coll_name = 'stat_excep_20210129'
-    # writer = mongo_writer
-    # client = writer.auth(username, password, mongos_host, mongos_port)
-    # stat_db = "test"
-    # stat_coll = "excep_stat_load_stat_" + stat_load.get_date(0)
-    # path = '/Users/mtr/PycharmProjects/mongoQuery/resource/exception'
-    # regex = 'catalina'
-    # func_name = 'emit'
-    # # excep_load(client, db_name, coll_name, path, regex, func_name)
-    #
-    # file_info_dic_from_path = stat_load.get_file_info(path, regex)
-    # deal_file_dic = stat_load.get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
-    #
-    # for name, num in deal_file_dic.items():
-    #     file_modify_time = file_info_dic_from_path.get(name)
-    #     insert_stat(client, stat_db, stat_coll, name, file_modify_time)
-    #     exceptinfo_list = stat_load.read_stat_info(name, num)
-    #     combine_excep_stat(client, db_name, coll_name, func_name, exceptinfo_list, name)
-    #     update_stat(client, stat_db, stat_coll, name, num + len(exceptinfo_list), file_modify_time)
-    # print('-----')
+    # test()
+    # 数据库认证
+    username = 'root'
+    password = 'root'
+    mongos_host = '10.19.85.33'
+    mongos_port = 34000
+    db_name = 'test'
+    coll_name = 'stat_service_20210208'
+    writer = mongo_writer
+    client = writer.auth(username, password, mongos_host, mongos_port)
+    stat_db = "test"
+    stat_coll = "service_stat_load_stat_" + stat_load.get_date(0)
+    path = '/Users/mtr/PycharmProjects/mongoQuery/resource/xdr_service'
+    regex = 'service'
+    func_name = 'xdr_service'
+
+    file_info_dic_from_path = stat_load.get_file_info(path, regex)
+    deal_file_dic = stat_load.get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
+
+    for name, num in deal_file_dic.items():
+        file_modify_time = file_info_dic_from_path.get(name)
+        insert_stat(client, stat_db, stat_coll, name, file_modify_time)
+        service_log_list = stat_load.read_stat_info(name, num)
+        combine_service_stat(client, db_name, coll_name, func_name, service_log_list, name)
+        update_stat(client, stat_db, stat_coll, name, num + len(service_log_list), file_modify_time)
+    print('-----')
