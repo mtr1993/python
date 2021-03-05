@@ -4,14 +4,14 @@ import os
 import re
 import socket
 
-import mongo_writer
+from asiainfo.mongoapp.mongo import mongo_writer
 
 logging.basicConfig(level=logging.DEBUG)
 
 
 def test():
-    mongo_data_dir = '/Users/mtr/PycharmProjects/mongoQuery/resource/mongo_data'
-    rollback_dir = 'rollback'
+    mongo_data_dir = '/resource/mongo_data'
+    rollback_dir = ''
     for root, dirs, files in os.walk(mongo_data_dir):
         print('root_dir:', root)
         # print('sub_dirs:', dirs)
@@ -124,8 +124,8 @@ if __name__ == '__main__':
     client = writer.auth(username, password, mongos_host, mongos_port)
     stat_db = "test"
     stat_coll = "mongo_rollback_load_stat_" + get_date(0)
-    mongo_data_dir_name = '/Users/mtr/PycharmProjects/mongoQuery/resource/mongo_data'
-    rollback_dir_name = 'rollback'
+    mongo_data_dir_name = '/resource/mongo_data'
+    rollback_dir_name = ''
     bson_pattern = re.compile(r'.*\.bson$')
     func_name = 'rollback'
     file_info_dic_from_path = get_rollback_file_info(mongo_data_dir_name, rollback_dir_name, bson_pattern)

@@ -2,8 +2,8 @@ import datetime
 import logging
 import re
 
-import mongo_writer
-import stat_load
+from asiainfo.mongoapp.mongo import mongo_writer
+from asiainfo.mongoapp.load import stat_load
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -126,7 +126,7 @@ if __name__ == '__main__':
     client = writer.auth(username, password, mongos_host, mongos_port)
     stat_db = "test"
     stat_coll = "service_stat_load_stat_" + stat_load.get_date(0)
-    path = '/Users/mtr/PycharmProjects/mongoQuery/resource/xdr_service'
+    path = '/resource/xdr_service'
     regex = 'service'
     func_name = 'xdr_service'
 

@@ -2,7 +2,7 @@ import re
 import stat_load
 import logging
 import datetime
-import mongo_writer
+from asiainfo.mongoapp.mongo import mongo_writer
 
 
 def test():
@@ -122,7 +122,7 @@ if __name__ == '__main__':
     client = writer.auth(username, password, mongos_host, mongos_port)
     stat_db = "test"
     stat_coll = "excep_stat_load_stat_" + stat_load.get_date(0)
-    path = '/Users/mtr/PycharmProjects/mongoQuery/resource/exception'
+    path = '/resource/exception'
     regex = 'catalina'
     func_name = 'emit'
     # excep_load(client, db_name, coll_name, path, regex, func_name)

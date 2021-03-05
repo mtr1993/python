@@ -1,4 +1,4 @@
-import mongo_writer
+from asiainfo.mongoapp.mongo import mongo_writer
 import json
 
 

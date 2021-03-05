@@ -1,6 +1,6 @@
 from itertools import islice
 
-import mongo_writer
+from asiainfo.mongoapp.mongo import mongo_writer
 import logging
 import datetime
 import os

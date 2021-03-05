@@ -1,6 +1,4 @@
-import logging
-import json
-import mongo_writer
+from asiainfo.mongoapp.mongo import mongo_writer
 
 
 def update_dic(str_line):
