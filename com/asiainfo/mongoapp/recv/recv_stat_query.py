@@ -5,28 +5,17 @@ from asiainfo.mongoapp.mongo import mongo_writer
 import json
 
 # logging.basicConfig(level=logging.DEBUG,
-#                     # filename='/Users/mtr/PycharmProjects/mongoQuery/resource/log/load_stat_query.log',
+#                     # filename='/Users/mtr/PycharmProjects/mongoQuery/resource/log/recv_stat_load.log',
 #                     filemode='a',
 #                     format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
 
-def query(client, db_name, coll_name, start_time, end_time, period):
-    # start_time = 20210107000000
-    # period = 235959
-    # end_time = start_time + period
+def query(client, db_name, coll_name,  start_time, end_time, period):
+    # end_time = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
+    # start_time = (datetime.datetime.now() + datetime.timedelta(minutes=period)).strftime('%Y%m%d%H%M%S')
     aggregate_sql = ('[{"$match":{"StartTime":{"$gte":"starttime","$lte":"endtime"}}},'
                      '{"$group":{"_id":null,'
-                     '"ReadXdrCount":{"$sum":"$ReadXdrCount"},'
-                     '"DeleteOkCount":{"$sum": "$DeleteOkCount"},'
-                     '"SkippedXdrCount":{"$sum":"$SkippedXdrCount"},'
-                     '"WriteOkXdrCount":{"$sum":"$WriteOkXdrCount"},'
-                     '"WriteFailXdrCount":{"$sum":"$WriteFailXdrCount"},'
-                     '"WriteFailMongoServerErrXdrCount":{"$sum": "$WriteFailMongoServerErrXdrCount"},'
-                     '"WriteFailMongoErrXdrCount":{"$sum":"$WriteFailMongoErrXdrCount"},'
-                     '"WriteFailSocketErrXdrCount":{"$sum":"$WriteFailSocketErrXdrCount"},'
-                     '"WriteFailBaseErrXdrCount":{"$sum":"$WriteFailBaseErrXdrCount"},'
-                     '"WriteDuplicateXdrCount":{"$sum": "$WriteDuplicateXdrCount"},'
-                     '"WriteNotRecycleCount":{"$sum":"$WriteNotRecycleCount"}}}]')
+                     '"TotalLines":{"$sum":"$TotalLines"}}}]')
     aggregate_sql = aggregate_sql.replace("starttime", str(start_time)).replace("endtime", str(end_time))
     logging.info(f'aggregate_sql is {aggregate_sql}')
     aggregate_sql_list = json.loads(aggregate_sql)
@@ -35,19 +24,19 @@ def query(client, db_name, coll_name, start_time, end_time, period):
     if len(result_list) == 0:
         speed = 0
     else:
-        speed = result_list[0].get("ReadXdrCount") / period
+        speed = result_list[0].get("TotalLines") / period
     logging.info(f"speed : {speed} 条/秒")
     return speed
 
 
-# xdrload stat 查询，计算入库效率
+# emit stat 查询，计算emit采集效率
 if __name__ == '__main__':
     username = 'root'
     password = 'root'
     mongos_host = '10.19.85.33'
     mongos_port = 34000
-    db_name = 'stat_redo_65'
-    coll_name = 'stat_xdr_in_20210107'
+    db_name = 'test'
+    coll_name = 'stat_recv_20210129'
     time_period = -5
     end_time = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
     start_time = (datetime.datetime.now() + datetime.timedelta(minutes=time_period)).strftime('%Y%m%d%H%M%S')

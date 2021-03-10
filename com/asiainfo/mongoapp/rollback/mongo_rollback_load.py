@@ -2,11 +2,14 @@ import datetime
 import logging
 import os
 import re
-import socket
 
 from asiainfo.mongoapp.mongo import mongo_writer
+from asiainfo.mongoapp.tool import tool_util, stat_util
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG,
+                    # filename='/Users/mtr/PycharmProjects/mongoQuery/resource/log/mongo_rollback_load.log',
+                    filemode='a',
+                    format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
 
 def test():
@@ -49,67 +52,49 @@ def get_rollback_file_info(path_of_mongo_data, rollback_dir, pattern):
     return rollback_files_dic
 
 
-# 获取前before_day的日期
-def get_date(before_day):
-    today = datetime.datetime.now()
-    offset = datetime.timedelta(days=-before_day)
-    date = (today + offset).strftime('%Y%m%d')
-    logging.info(f'day is {date}')
-    return date
+# # insert stat
+# def insert_stat(mongo_client, stat_db_name, stat_coll_name, filename, file_modify_time_from_path):
+#     start_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+#     status = 'start'
+#     line_number = '-1'
+#     condition = {"FileName": filename}
+#     doc = {"$set": {'StartTime': start_time, 'Status': status, 'FileLineNumber': line_number,
+#                     'FileName': filename, "FileModifyTime": file_modify_time_from_path}}
+#     writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
+#
+#
+# # update stat
+# def update_stat(mongo_client, stat_db_name, stat_coll_name, filename, line_number, file_modify_time_from_path):
+#     end_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+#     status = 'finish'
+#     condition = {"FileName": filename}
+#     doc = {"$set": {'Status': status, 'FileLineNumber': line_number, 'EndTime': end_time,
+#                     "FileModifyTime": file_modify_time_from_path}}
+#     logging.info(f'conditon is: {condition}, doc is : {doc}')
+#     writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
+#
 
-
-# insert stat
-def insert_stat(mongo_client, stat_db_name, stat_coll_name, filename, file_modify_time_from_path):
-    start_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-    status = 'start'
-    line_number = '-1'
-    condition = {"FileName": filename}
-    doc = {"$set": {'StartTime': start_time, 'Status': status, 'FileLineNumber': line_number,
-                    'FileName': filename, "FileModifyTime": file_modify_time_from_path}}
-    writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
-
-
-# update stat
-def update_stat(mongo_client, stat_db_name, stat_coll_name, filename, line_number, file_modify_time_from_path):
-    end_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-    status = 'finish'
-    condition = {"FileName": filename}
-    doc = {"$set": {'Status': status, 'FileLineNumber': line_number, 'EndTime': end_time,
-                    "FileModifyTime": file_modify_time_from_path}}
-    logging.info(f'conditon is: {condition}, doc is : {doc}')
-    writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
-
-
-def combine_rollback_stat(db_client, db, coll, function_name, name):
-    stat_dic = dict({"FileName": name,
+def combine_rollback_stat(db_client, db, coll, function_name, file_name):
+    stat_dic = dict({"FileName": file_name,
                      "InputTime": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'),
                      "FunctionName": function_name,
-                     "IpAddr": get_ip()})
+                     "IpAddr": tool_util.get_ip()})
     mongo_writer.conn_insertone(db_client, db, coll, stat_dic)
 
 
-# 查询stat入库的任务stat信息,和filepath路径下文件比对，获取需要增量处理的stat文件名和行号
-def get_deal_file_dic(mongo_client, stat_db_name, stat_coll_name, file_info_dic):
-    condition = {'Status': 'finish'}
-    result_list = mongo_writer.conn_query(mongo_client, stat_db_name, stat_coll_name, condition)
-    logging.info(f'result_list is {result_list}')
-    if result_list is not None:
-        for doc in result_list:
-            file_name = doc.get('FileName')
-            logging.debug(f'filename is {file_name}')
-            if file_name is not None:
-                file_info_dic.pop(file_name)
-    logging.info(f'file_deal_dic is {file_info_dic}')
-    return file_info_dic
-
-
-# 获取计算机名称
-def get_ip():
-    hostname = socket.gethostname()
-    # 获取本机IP
-    ip = socket.gethostbyname(hostname)
-    logging.debug(ip)
-    return ip
+# # 查询stat入库的任务stat信息,和filepath路径下文件比对，获取需要增量处理的stat文件名和行号
+# def get_deal_file_dic(mongo_client, stat_db_name, stat_coll_name, file_info_dic):
+#     condition = {'Status': 'finish'}
+#     result_list = mongo_writer.conn_query(mongo_client, stat_db_name, stat_coll_name, condition)
+#     logging.info(f'result_list is {result_list}')
+#     if result_list is not None:
+#         for doc in result_list:
+#             file_name = doc.get('FileName')
+#             logging.debug(f'filename is {file_name}')
+#             if file_name is not None:
+#                 file_info_dic.pop(file_name)
+#     logging.info(f'file_deal_dic is {file_info_dic}')
+#     return file_info_dic
 
 
 if __name__ == '__main__':
@@ -119,22 +104,20 @@ if __name__ == '__main__':
     mongos_host = '10.19.85.33'
     mongos_port = 34000
     db_name = 'test'
-    coll_name = 'stat_rollback_20210129'
-    writer = mongo_writer
-    client = writer.auth(username, password, mongos_host, mongos_port)
+    coll_name = 'stat_rollback'
+    client = mongo_writer.auth(username, password, mongos_host, mongos_port)
     stat_db = "test"
-    stat_coll = "mongo_rollback_load_stat_" + get_date(0)
-    mongo_data_dir_name = '/resource/mongo_data'
-    rollback_dir_name = ''
+    stat_coll = "mongo_rollback_stat_in"
+    mongo_data_dir_name = '/Users/mtr/PycharmProjects/mongoQuery/resource'
+    rollback_dir_name = 'rollback'
     bson_pattern = re.compile(r'.*\.bson$')
     func_name = 'rollback'
     file_info_dic_from_path = get_rollback_file_info(mongo_data_dir_name, rollback_dir_name, bson_pattern)
-    file_dic = get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
+    file_dic = tool_util.get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
     logging.info(f'files_dic is {file_dic}')
     for name in file_dic.keys():
         file_modify_time = file_info_dic_from_path.get(name)
-        insert_stat(client, stat_db, stat_coll, name, file_modify_time)
+        stat_util.insert_stat(mongo_writer, client, stat_db, stat_coll, name, file_modify_time)
         combine_rollback_stat(client, db_name, coll_name, func_name, name)
-        update_stat(client, stat_db, stat_coll, name, 1, file_modify_time)
-    print('-----')
-    get_ip()
+        stat_util.update_stat(mongo_writer, client, stat_db, stat_coll, name, 1, file_modify_time)
+    logging.info(f'mongo_rollback_load end')

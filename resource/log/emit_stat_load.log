@@ -1,0 +1,985 @@
+2021-03-08 10:05:45,570 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:58] - INFO: --------
+2021-03-08 10:05:46,333 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:21] - INFO: day is 20210308
+2021-03-08 10:05:46,334 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:32] - DEBUG:  full_name is /Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt
+2021-03-08 10:05:46,334 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:35] - INFO:  file_info_dic is {'/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt': 1612161127.843655}
+2021-03-08 10:05:46,334 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:80] - DEBUG: file_deal_dic is: {'/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt': -1}
+2021-03-08 10:05:46,334 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:112] - DEBUG:  database is test, coll is emit_stat_load_stat_20210308, condition is {'Status': 'finish'}
+2021-03-08 10:05:46,555 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:56] - INFO: result_list is []
+2021-03-08 10:05:46,555 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:71] - INFO: file_deal_dic is {'/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt': -1}
+2021-03-08 10:05:50,858 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:101] - INFO: update: test.emit_stat_load_stat_20210308 condition is {'FileName': '/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt'}  to  {'$set': {'StartTime': '2021-03-08 10:05:46.555585', 'Status': 'start', 'FileLineNumber': '-1', 'FileName': '/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt', 'FileModifyTime': 1612161127.843655}}   result is: 0
+2021-03-08 10:05:50,859 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820151010.00679.sms.A;FileSize:19844;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:17;CorrectLines:17;ErrorLines:0;SendLines:17;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:61;TopicList:{CloudXdrTopic0.2:8;CloudXdrTopic1.2:4;CloudXdrTopic2.2:5;};BillDateList:{20200820:17;};TargetLines:0
+2021-03-08 10:05:50,859 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820150502.00673.sms.A;FileSize:16540;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:14;CorrectLines:14;ErrorLines:0;SendLines:14;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:49;TopicList:{CloudXdrTopic0.2:2;CloudXdrTopic1.2:4;CloudXdrTopic2.2:8;};BillDateList:{20200820:14;};TargetLines:0
+2021-03-08 10:05:50,859 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820151412.10685.sms.A;FileSize:24625;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:21;CorrectLines:21;ErrorLines:0;SendLines:21;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:150;TopicList:{CloudXdrTopic0.2:9;CloudXdrTopic1.2:3;CloudXdrTopic2.2:9;};BillDateList:{20200820:21;};TargetLines:0
+2021-03-08 10:05:50,859 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820151212.00681.sms.A;FileSize:27547;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:23;CorrectLines:23;ErrorLines:0;SendLines:23;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:152;TopicList:{CloudXdrTopic0.2:3;CloudXdrTopic1.2:15;CloudXdrTopic2.2:5;};BillDateList:{20200820:23;};TargetLines:0
+2021-03-08 10:05:50,859 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820150812.10679.sms.A;FileSize:26055;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:22;CorrectLines:22;ErrorLines:0;SendLines:22;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:48;TopicList:{CloudXdrTopic0.2:4;CloudXdrTopic1.2:5;CloudXdrTopic2.2:13;};BillDateList:{20200820:22;};TargetLines:0
+2021-03-08 10:05:50,859 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820151538.00685.sms.A;FileSize:31074;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:26;CorrectLines:26;ErrorLines:0;SendLines:26;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:218;TopicList:{CloudXdrTopic0.2:5;CloudXdrTopic1.2:11;CloudXdrTopic2.2:10;};BillDateList:{20200820:26;};TargetLines:0
+2021-03-08 10:05:50,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820151703.00687.sms.A;FileSize:21503;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:18;CorrectLines:18;ErrorLines:0;SendLines:18;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:163;TopicList:{CloudXdrTopic0.2:6;CloudXdrTopic1.2:6;CloudXdrTopic2.2:6;};BillDateList:{20200820:18;};TargetLines:0
+2021-03-08 10:05:50,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820151828.00688.sms.A;FileSize:22443;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:19;CorrectLines:19;ErrorLines:0;SendLines:19;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:169;TopicList:{CloudXdrTopic0.2:6;CloudXdrTopic1.2:7;CloudXdrTopic2.2:6;};BillDateList:{20200820:19;};TargetLines:0
+2021-03-08 10:05:50,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM_NoTimeOut-3_20200820144011.10632.sms.A;FileSize:8264;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:7;CorrectLines:7;ErrorLines:0;SendLines:7;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190421;Speed:66;TopicList:{CloudXdrTopic0.2:3;CloudXdrTopic1.2:2;CloudXdrTopic2.2:2;};BillDateList:{20200820:7;};TargetLines:0
+2021-03-08 10:05:50,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:TimeOut_H_1_20200820.15312701408.sms.A;FileSize:17426;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:15;CorrectLines:15;ErrorLines:0;SendLines:15;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190421;Speed:131;TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;};BillDateList:{20200820:15;};TargetLines:0
+2021-03-08 10:05:50,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:TimeOut_H_1_20200820.15312701408.sms.A;FileSize:17426;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:15;CorrectLines:15;ErrorLines:0;SendLines:15;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190421;Speed:131;TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;};BillDateList:{20200820:15;};TargetLines:0
+2021-03-08 10:05:50,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:TimeOut_H_1_20200820.15312701408.sms.A;FileSize:17426;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:15;CorrectLines:15;ErrorLines:0;SendLines:15;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190421;Speed:131;TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;};BillDateList:{20200820:15;};TargetLines:0
+2021-03-08 10:05:50,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:TimeOut_H_1_20200820.15312701408.sms.A;FileSize:17426;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:15;CorrectLines:15;ErrorLines:0;SendLines:15;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190421;Speed:131;TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;};BillDateList:{20200820:15;};TargetLines:0
+2021-03-08 10:05:50,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820151010.00679.sms.A
+2021-03-08 10:05:50,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820151010.00679.sms.A
+2021-03-08 10:05:50,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:19844
+2021-03-08 10:05:50,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:19844
+2021-03-08 10:05:50,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:05:50,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:05:50,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:05:50,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:05:50,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:05:50,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:05:50,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:17
+2021-03-08 10:05:50,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:17
+2021-03-08 10:05:50,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:17
+2021-03-08 10:05:50,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:17
+2021-03-08 10:05:50,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:05:50,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:05:50,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:17
+2021-03-08 10:05:50,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:17
+2021-03-08 10:05:50,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:05:50,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:05:50,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:05:50,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:05:50,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:05:50,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:05:50,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:05:50,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:05:50,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:61
+2021-03-08 10:05:50,863 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:61
+2021-03-08 10:05:50,863 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:8;CloudXdrTopic1.2:4;CloudXdrTopic2.2:5;}
+2021-03-08 10:05:50,863 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:8;CloudXdrTopic1.2:4;CloudXdrTopic2.2:5;}
+2021-03-08 10:05:50,863 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:17;}
+2021-03-08 10:05:50,863 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:17;}
+2021-03-08 10:05:50,863 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:05:50,863 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:05:50,863 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820151010.00679.sms.A', 'FileSize': '19844', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 17, 'CorrectLines': 17, 'ErrorLines': 0, 'SendLines': 17, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '61', 'TopicList': '{CloudXdrTopic0.2:8;CloudXdrTopic1.2:4;CloudXdrTopic2.2:5;}', 'BillDateList': '{20200820:17;}', 'TargetLines': 0}
+2021-03-08 10:05:51,087 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:57] - INFO: insert  result is: 6045867e2799fc2565b86d93
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820150502.00673.sms.A
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820150502.00673.sms.A
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:16540
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:16540
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:14
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:14
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:14
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:14
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:14
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:14
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:05:51,088 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:05:51,089 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:05:51,089 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:05:51,089 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:05:51,089 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:05:51,089 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:49
+2021-03-08 10:05:51,089 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:49
+2021-03-08 10:05:51,089 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:2;CloudXdrTopic1.2:4;CloudXdrTopic2.2:8;}
+2021-03-08 10:05:51,089 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:2;CloudXdrTopic1.2:4;CloudXdrTopic2.2:8;}
+2021-03-08 10:05:51,089 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:14;}
+2021-03-08 10:05:51,089 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:14;}
+2021-03-08 10:05:51,089 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:05:51,089 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:05:51,089 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820150502.00673.sms.A', 'FileSize': '16540', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 14, 'CorrectLines': 14, 'ErrorLines': 0, 'SendLines': 14, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '49', 'TopicList': '{CloudXdrTopic0.2:2;CloudXdrTopic1.2:4;CloudXdrTopic2.2:8;}', 'BillDateList': '{20200820:14;}', 'TargetLines': 0}
+2021-03-08 10:05:51,169 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:57] - INFO: insert  result is: 6045867f2799fc2565b86d94
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820151412.10685.sms.A
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820151412.10685.sms.A
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:24625
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:24625
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:21
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:21
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:21
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:21
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:05:51,170 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:21
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:21
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:150
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:150
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:9;CloudXdrTopic1.2:3;CloudXdrTopic2.2:9;}
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:9;CloudXdrTopic1.2:3;CloudXdrTopic2.2:9;}
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:21;}
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:21;}
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:05:51,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820151412.10685.sms.A', 'FileSize': '24625', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 21, 'CorrectLines': 21, 'ErrorLines': 0, 'SendLines': 21, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '150', 'TopicList': '{CloudXdrTopic0.2:9;CloudXdrTopic1.2:3;CloudXdrTopic2.2:9;}', 'BillDateList': '{20200820:21;}', 'TargetLines': 0}
+2021-03-08 10:05:51,562 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:57] - INFO: insert  result is: 6045867f2799fc2565b86d95
+2021-03-08 10:05:51,562 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820151212.00681.sms.A
+2021-03-08 10:05:51,562 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820151212.00681.sms.A
+2021-03-08 10:05:51,562 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:27547
+2021-03-08 10:05:51,562 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:27547
+2021-03-08 10:05:51,562 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:05:51,562 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:05:51,562 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:05:51,562 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:05:51,562 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:05:51,563 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:05:51,563 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:23
+2021-03-08 10:05:51,563 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:23
+2021-03-08 10:05:51,563 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:23
+2021-03-08 10:05:51,563 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:23
+2021-03-08 10:05:51,563 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:05:51,563 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:05:51,563 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:23
+2021-03-08 10:05:51,563 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:23
+2021-03-08 10:05:51,563 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:05:51,563 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:05:51,563 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:05:51,564 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:05:51,564 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:05:51,564 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:05:51,564 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:05:51,564 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:05:51,564 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:152
+2021-03-08 10:05:51,564 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:152
+2021-03-08 10:05:51,564 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:3;CloudXdrTopic1.2:15;CloudXdrTopic2.2:5;}
+2021-03-08 10:05:51,564 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:3;CloudXdrTopic1.2:15;CloudXdrTopic2.2:5;}
+2021-03-08 10:05:51,564 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:23;}
+2021-03-08 10:05:51,564 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:23;}
+2021-03-08 10:05:51,564 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:05:51,564 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:05:51,564 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820151212.00681.sms.A', 'FileSize': '27547', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 23, 'CorrectLines': 23, 'ErrorLines': 0, 'SendLines': 23, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '152', 'TopicList': '{CloudXdrTopic0.2:3;CloudXdrTopic1.2:15;CloudXdrTopic2.2:5;}', 'BillDateList': '{20200820:23;}', 'TargetLines': 0}
+2021-03-08 10:05:51,634 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:57] - INFO: insert  result is: 6045867f2799fc2565b86d96
+2021-03-08 10:05:51,634 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820150812.10679.sms.A
+2021-03-08 10:05:51,635 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820150812.10679.sms.A
+2021-03-08 10:05:51,635 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:26055
+2021-03-08 10:05:51,635 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:26055
+2021-03-08 10:05:51,635 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:05:51,635 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:05:51,635 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:05:51,635 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:05:51,635 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:05:51,636 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:05:51,636 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:22
+2021-03-08 10:05:51,636 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:22
+2021-03-08 10:05:51,636 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:22
+2021-03-08 10:05:51,636 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:22
+2021-03-08 10:05:51,636 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:05:51,636 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:05:51,636 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:22
+2021-03-08 10:05:51,637 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:22
+2021-03-08 10:05:51,637 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:05:51,637 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:05:51,637 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:05:51,637 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:05:51,637 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:05:51,637 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:05:51,637 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:05:51,637 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:05:51,637 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:48
+2021-03-08 10:05:51,637 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:48
+2021-03-08 10:05:51,638 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:4;CloudXdrTopic1.2:5;CloudXdrTopic2.2:13;}
+2021-03-08 10:05:51,638 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:4;CloudXdrTopic1.2:5;CloudXdrTopic2.2:13;}
+2021-03-08 10:05:51,638 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:22;}
+2021-03-08 10:05:51,638 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:22;}
+2021-03-08 10:05:51,638 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:05:51,638 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:05:51,638 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820150812.10679.sms.A', 'FileSize': '26055', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 22, 'CorrectLines': 22, 'ErrorLines': 0, 'SendLines': 22, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '48', 'TopicList': '{CloudXdrTopic0.2:4;CloudXdrTopic1.2:5;CloudXdrTopic2.2:13;}', 'BillDateList': '{20200820:22;}', 'TargetLines': 0}
+2021-03-08 10:05:51,768 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:57] - INFO: insert  result is: 6045867f2799fc2565b86d97
+2021-03-08 10:05:51,768 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820151538.00685.sms.A
+2021-03-08 10:05:51,768 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820151538.00685.sms.A
+2021-03-08 10:05:51,768 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:31074
+2021-03-08 10:05:51,768 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:31074
+2021-03-08 10:05:51,768 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:05:51,768 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:05:51,768 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:05:51,768 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:05:51,768 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:26
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:26
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:26
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:26
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:26
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:26
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:218
+2021-03-08 10:05:51,769 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:218
+2021-03-08 10:05:51,770 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:5;CloudXdrTopic1.2:11;CloudXdrTopic2.2:10;}
+2021-03-08 10:05:51,770 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:5;CloudXdrTopic1.2:11;CloudXdrTopic2.2:10;}
+2021-03-08 10:05:51,770 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:26;}
+2021-03-08 10:05:51,770 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:26;}
+2021-03-08 10:05:51,770 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:05:51,770 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:05:51,770 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820151538.00685.sms.A', 'FileSize': '31074', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 26, 'CorrectLines': 26, 'ErrorLines': 0, 'SendLines': 26, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '218', 'TopicList': '{CloudXdrTopic0.2:5;CloudXdrTopic1.2:11;CloudXdrTopic2.2:10;}', 'BillDateList': '{20200820:26;}', 'TargetLines': 0}
+2021-03-08 10:05:51,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:57] - INFO: insert  result is: 6045867f2799fc2565b86d98
+2021-03-08 10:05:51,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820151703.00687.sms.A
+2021-03-08 10:05:51,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820151703.00687.sms.A
+2021-03-08 10:05:51,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:21503
+2021-03-08 10:05:51,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:21503
+2021-03-08 10:05:51,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:05:51,860 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:18
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:18
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:18
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:18
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:18
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:18
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:05:51,861 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:05:51,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:05:51,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:05:51,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:05:51,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:05:51,862 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:05:51,863 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:163
+2021-03-08 10:05:51,864 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:163
+2021-03-08 10:05:51,865 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:6;CloudXdrTopic1.2:6;CloudXdrTopic2.2:6;}
+2021-03-08 10:05:51,865 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:6;CloudXdrTopic1.2:6;CloudXdrTopic2.2:6;}
+2021-03-08 10:05:51,865 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:18;}
+2021-03-08 10:05:51,866 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:18;}
+2021-03-08 10:05:51,866 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:05:51,866 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:05:51,866 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820151703.00687.sms.A', 'FileSize': '21503', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 18, 'CorrectLines': 18, 'ErrorLines': 0, 'SendLines': 18, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '163', 'TopicList': '{CloudXdrTopic0.2:6;CloudXdrTopic1.2:6;CloudXdrTopic2.2:6;}', 'BillDateList': '{20200820:18;}', 'TargetLines': 0}
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:57] - INFO: insert  result is: 6045867f2799fc2565b86d99
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820151828.00688.sms.A
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820151828.00688.sms.A
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:22443
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:22443
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:19
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:19
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:19
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:19
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:19
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:19
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:05:52,002 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:169
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:169
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:6;CloudXdrTopic1.2:7;CloudXdrTopic2.2:6;}
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:6;CloudXdrTopic1.2:7;CloudXdrTopic2.2:6;}
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:19;}
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:19;}
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:05:52,003 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820151828.00688.sms.A', 'FileSize': '22443', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 19, 'CorrectLines': 19, 'ErrorLines': 0, 'SendLines': 19, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '169', 'TopicList': '{CloudXdrTopic0.2:6;CloudXdrTopic1.2:7;CloudXdrTopic2.2:6;}', 'BillDateList': '{20200820:19;}', 'TargetLines': 0}
+2021-03-08 10:05:52,064 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:57] - INFO: insert  result is: 604586802799fc2565b86d9a
+2021-03-08 10:05:52,064 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM_NoTimeOut-3_20200820144011.10632.sms.A
+2021-03-08 10:05:52,064 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM_NoTimeOut-3_20200820144011.10632.sms.A
+2021-03-08 10:05:52,064 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:8264
+2021-03-08 10:05:52,064 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:8264
+2021-03-08 10:05:52,064 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:05:52,064 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:05:52,064 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:05:52,064 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:05:52,064 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:05:52,064 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:05:52,064 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:7
+2021-03-08 10:05:52,064 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:7
+2021-03-08 10:05:52,064 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:7
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:7
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:7
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:7
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190421
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190421
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:66
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:66
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:3;CloudXdrTopic1.2:2;CloudXdrTopic2.2:2;}
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:3;CloudXdrTopic1.2:2;CloudXdrTopic2.2:2;}
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:7;}
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:7;}
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:05:52,065 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM_NoTimeOut-3_20200820144011.10632.sms.A', 'FileSize': '8264', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 7, 'CorrectLines': 7, 'ErrorLines': 0, 'SendLines': 7, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190421', 'Speed': '66', 'TopicList': '{CloudXdrTopic0.2:3;CloudXdrTopic1.2:2;CloudXdrTopic2.2:2;}', 'BillDateList': '{20200820:7;}', 'TargetLines': 0}
+2021-03-08 10:05:52,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:57] - INFO: insert  result is: 604586802799fc2565b86d9b
+2021-03-08 10:05:52,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:05:52,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:05:52,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:17426
+2021-03-08 10:05:52,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:17426
+2021-03-08 10:05:52,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:05:52,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:05:52,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:05:52,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:05:52,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:05:52,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:05:52,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:15
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:15
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:15
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:15
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:15
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:15
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190421
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190421
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:131
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:131
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:15;}
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:15;}
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:05:52,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'TimeOut_H_1_20200820.15312701408.sms.A', 'FileSize': '17426', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 15, 'CorrectLines': 15, 'ErrorLines': 0, 'SendLines': 15, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190421', 'Speed': '131', 'TopicList': '{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}', 'BillDateList': '{20200820:15;}', 'TargetLines': 0}
+2021-03-08 10:05:52,689 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:57] - INFO: insert  result is: 604586802799fc2565b86d9c
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:17426
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:17426
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:15
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:15
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:15
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:15
+2021-03-08 10:05:52,690 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:05:52,691 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:05:52,691 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:15
+2021-03-08 10:05:52,691 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:15
+2021-03-08 10:05:52,691 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:05:52,691 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:05:52,691 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:05:52,691 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:05:52,691 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:05:52,691 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:05:52,691 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190421
+2021-03-08 10:05:52,691 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190421
+2021-03-08 10:05:52,691 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:131
+2021-03-08 10:05:52,692 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:131
+2021-03-08 10:05:52,692 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:05:52,692 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:05:52,692 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:15;}
+2021-03-08 10:05:52,692 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:15;}
+2021-03-08 10:05:52,692 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:05:52,692 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:05:52,692 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'TimeOut_H_1_20200820.15312701408.sms.A', 'FileSize': '17426', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 15, 'CorrectLines': 15, 'ErrorLines': 0, 'SendLines': 15, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190421', 'Speed': '131', 'TopicList': '{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}', 'BillDateList': '{20200820:15;}', 'TargetLines': 0}
+2021-03-08 10:05:52,759 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:57] - INFO: insert  result is: 604586802799fc2565b86d9d
+2021-03-08 10:05:52,759 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:05:52,759 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:05:52,759 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:17426
+2021-03-08 10:05:52,759 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:17426
+2021-03-08 10:05:52,759 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:05:52,759 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:05:52,759 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:05:52,759 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:05:52,759 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:15
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:15
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:15
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:15
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:15
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:15
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190421
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190421
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:131
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:131
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:15;}
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:15;}
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:05:52,760 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'TimeOut_H_1_20200820.15312701408.sms.A', 'FileSize': '17426', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 15, 'CorrectLines': 15, 'ErrorLines': 0, 'SendLines': 15, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190421', 'Speed': '131', 'TopicList': '{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}', 'BillDateList': '{20200820:15;}', 'TargetLines': 0}
+2021-03-08 10:05:52,945 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:57] - INFO: insert  result is: 604586802799fc2565b86d9e
+2021-03-08 10:05:52,946 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:05:52,946 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:05:52,946 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:17426
+2021-03-08 10:05:52,946 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:17426
+2021-03-08 10:05:52,946 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:05:52,946 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:05:52,946 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:05:52,946 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:05:52,947 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:05:52,947 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:05:52,947 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:15
+2021-03-08 10:05:52,947 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:15
+2021-03-08 10:05:52,947 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:15
+2021-03-08 10:05:52,947 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:15
+2021-03-08 10:05:52,947 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:05:52,947 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:05:52,947 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:15
+2021-03-08 10:05:52,948 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:15
+2021-03-08 10:05:52,948 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:05:52,948 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:05:52,948 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:05:52,948 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:05:52,948 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:05:52,948 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:05:52,948 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190421
+2021-03-08 10:05:52,948 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190421
+2021-03-08 10:05:52,948 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:131
+2021-03-08 10:05:52,948 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:131
+2021-03-08 10:05:52,948 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:05:52,949 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:05:52,949 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:15;}
+2021-03-08 10:05:52,949 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:15;}
+2021-03-08 10:05:52,949 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:05:52,949 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:05:52,949 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'TimeOut_H_1_20200820.15312701408.sms.A', 'FileSize': '17426', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 15, 'CorrectLines': 15, 'ErrorLines': 0, 'SendLines': 15, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190421', 'Speed': '131', 'TopicList': '{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}', 'BillDateList': '{20200820:15;}', 'TargetLines': 0}
+2021-03-08 10:05:53,303 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:57] - INFO: insert  result is: 604586802799fc2565b86d9f
+2021-03-08 10:05:53,303 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/stat_util.py[line:27] - INFO: conditon is: {'FileName': '/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt'}, doc is : {'$set': {'Status': 'finish', 'FileLineNumber': 12, 'EndTime': '2021-03-08 10:05:53.303178', 'FileModifyTime': 1612161127.843655}}
+2021-03-08 10:05:53,436 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:101] - INFO: update: test.emit_stat_load_stat_20210308 condition is {'FileName': '/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt'}  to  {'$set': {'Status': 'finish', 'FileLineNumber': 12, 'EndTime': '2021-03-08 10:05:53.303178', 'FileModifyTime': 1612161127.843655}}   result is: 1
+2021-03-08 10:05:53,436 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:84] - INFO: -----
+2021-03-08 10:57:51,233 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:58] - INFO: start emit_stat_load
+2021-03-08 10:57:52,034 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:73] - INFO: start emit load, path is /Users/mtr/PycharmProjects/mongoQuery/resource/emit
+2021-03-08 10:57:52,035 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:32] - DEBUG:  full_name is /Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt
+2021-03-08 10:57:52,035 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:35] - INFO:  file_info_dic is {'/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt': 1612161127.843655}
+2021-03-08 10:57:52,035 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:80] - DEBUG: file_deal_dic is: {'/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt': -1}
+2021-03-08 10:57:52,035 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:107] - DEBUG:  database is test, coll is stat_emit_in, condition is {'Status': 'finish'}
+2021-03-08 10:57:52,113 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:56] - INFO: result_list is []
+2021-03-08 10:57:52,113 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:71] - INFO: file_deal_dic is {'/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt': -1}
+2021-03-08 10:57:59,530 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:96] - INFO: update: test.stat_emit_in condition is {'FileName': '/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt'}  to  {'$set': {'StartTime': '2021-03-08 10:57:52.113276', 'Status': 'start', 'FileLineNumber': '-1', 'FileName': '/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt', 'FileModifyTime': 1612161127.843655}}   result is: 0
+2021-03-08 10:57:59,531 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820151010.00679.sms.A;FileSize:19844;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:17;CorrectLines:17;ErrorLines:0;SendLines:17;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:61;TopicList:{CloudXdrTopic0.2:8;CloudXdrTopic1.2:4;CloudXdrTopic2.2:5;};BillDateList:{20200820:17;};TargetLines:0
+2021-03-08 10:57:59,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820150502.00673.sms.A;FileSize:16540;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:14;CorrectLines:14;ErrorLines:0;SendLines:14;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:49;TopicList:{CloudXdrTopic0.2:2;CloudXdrTopic1.2:4;CloudXdrTopic2.2:8;};BillDateList:{20200820:14;};TargetLines:0
+2021-03-08 10:57:59,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820151412.10685.sms.A;FileSize:24625;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:21;CorrectLines:21;ErrorLines:0;SendLines:21;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:150;TopicList:{CloudXdrTopic0.2:9;CloudXdrTopic1.2:3;CloudXdrTopic2.2:9;};BillDateList:{20200820:21;};TargetLines:0
+2021-03-08 10:57:59,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820151212.00681.sms.A;FileSize:27547;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:23;CorrectLines:23;ErrorLines:0;SendLines:23;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:152;TopicList:{CloudXdrTopic0.2:3;CloudXdrTopic1.2:15;CloudXdrTopic2.2:5;};BillDateList:{20200820:23;};TargetLines:0
+2021-03-08 10:57:59,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820150812.10679.sms.A;FileSize:26055;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:22;CorrectLines:22;ErrorLines:0;SendLines:22;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:48;TopicList:{CloudXdrTopic0.2:4;CloudXdrTopic1.2:5;CloudXdrTopic2.2:13;};BillDateList:{20200820:22;};TargetLines:0
+2021-03-08 10:57:59,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820151538.00685.sms.A;FileSize:31074;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:26;CorrectLines:26;ErrorLines:0;SendLines:26;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:218;TopicList:{CloudXdrTopic0.2:5;CloudXdrTopic1.2:11;CloudXdrTopic2.2:10;};BillDateList:{20200820:26;};TargetLines:0
+2021-03-08 10:57:59,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820151703.00687.sms.A;FileSize:21503;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:18;CorrectLines:18;ErrorLines:0;SendLines:18;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:163;TopicList:{CloudXdrTopic0.2:6;CloudXdrTopic1.2:6;CloudXdrTopic2.2:6;};BillDateList:{20200820:18;};TargetLines:0
+2021-03-08 10:57:59,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM-3_20200820151828.00688.sms.A;FileSize:22443;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:19;CorrectLines:19;ErrorLines:0;SendLines:19;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190420;Speed:169;TopicList:{CloudXdrTopic0.2:6;CloudXdrTopic1.2:7;CloudXdrTopic2.2:6;};BillDateList:{20200820:19;};TargetLines:0
+2021-03-08 10:57:59,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:H_GYM_NoTimeOut-3_20200820144011.10632.sms.A;FileSize:8264;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:7;CorrectLines:7;ErrorLines:0;SendLines:7;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190421;Speed:66;TopicList:{CloudXdrTopic0.2:3;CloudXdrTopic1.2:2;CloudXdrTopic2.2:2;};BillDateList:{20200820:7;};TargetLines:0
+2021-03-08 10:57:59,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:TimeOut_H_1_20200820.15312701408.sms.A;FileSize:17426;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:15;CorrectLines:15;ErrorLines:0;SendLines:15;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190421;Speed:131;TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;};BillDateList:{20200820:15;};TargetLines:0
+2021-03-08 10:57:59,532 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:TimeOut_H_1_20200820.15312701408.sms.A;FileSize:17426;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:15;CorrectLines:15;ErrorLines:0;SendLines:15;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190421;Speed:131;TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;};BillDateList:{20200820:15;};TargetLines:0
+2021-03-08 10:57:59,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:TimeOut_H_1_20200820.15312701408.sms.A;FileSize:17426;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:15;CorrectLines:15;ErrorLines:0;SendLines:15;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190421;Speed:131;TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;};BillDateList:{20200820:15;};TargetLines:0
+2021-03-08 10:57:59,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/tool_util.py[line:46] - INFO: stat_line_str is: FileName:TimeOut_H_1_20200820.15312701408.sms.A;FileSize:17426;Earlist:20200820;latest:20200820;ExtALines:0;TotalLines:15;CorrectLines:15;ErrorLines:0;SendLines:15;NonTimeoutExceptionLines:0;TimeoutExceptionLines:0;StartTime:20201216190420;EndTime:20201216190421;Speed:131;TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;};BillDateList:{20200820:15;};TargetLines:0
+2021-03-08 10:57:59,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820151010.00679.sms.A
+2021-03-08 10:57:59,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820151010.00679.sms.A
+2021-03-08 10:57:59,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:19844
+2021-03-08 10:57:59,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:19844
+2021-03-08 10:57:59,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:57:59,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:57:59,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:57:59,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:57:59,533 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:57:59,534 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:57:59,534 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:17
+2021-03-08 10:57:59,534 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:17
+2021-03-08 10:57:59,534 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:17
+2021-03-08 10:57:59,534 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:17
+2021-03-08 10:57:59,534 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:57:59,534 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:57:59,534 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:17
+2021-03-08 10:57:59,534 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:17
+2021-03-08 10:57:59,534 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:57:59,534 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:57:59,534 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:57:59,535 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:57:59,535 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:57:59,535 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:57:59,535 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:57:59,535 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:57:59,535 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:61
+2021-03-08 10:57:59,535 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:61
+2021-03-08 10:57:59,535 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:8;CloudXdrTopic1.2:4;CloudXdrTopic2.2:5;}
+2021-03-08 10:57:59,535 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:8;CloudXdrTopic1.2:4;CloudXdrTopic2.2:5;}
+2021-03-08 10:57:59,535 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:17;}
+2021-03-08 10:57:59,535 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:17;}
+2021-03-08 10:57:59,535 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:57:59,535 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:57:59,535 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820151010.00679.sms.A', 'FileSize': '19844', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 17, 'CorrectLines': 17, 'ErrorLines': 0, 'SendLines': 17, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '61', 'TopicList': '{CloudXdrTopic0.2:8;CloudXdrTopic1.2:4;CloudXdrTopic2.2:5;}', 'BillDateList': '{20200820:17;}', 'TargetLines': 0}
+2021-03-08 10:58:03,248 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:52] - INFO: insert  result is: 604592b72799fc4dc8e805ab
+2021-03-08 10:58:03,248 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820150502.00673.sms.A
+2021-03-08 10:58:03,248 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820150502.00673.sms.A
+2021-03-08 10:58:03,248 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:16540
+2021-03-08 10:58:03,249 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:16540
+2021-03-08 10:58:03,249 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:58:03,249 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:58:03,249 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:58:03,249 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:58:03,249 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:58:03,249 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:58:03,249 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:14
+2021-03-08 10:58:03,249 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:14
+2021-03-08 10:58:03,249 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:14
+2021-03-08 10:58:03,249 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:14
+2021-03-08 10:58:03,249 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:58:03,250 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:58:03,250 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:14
+2021-03-08 10:58:03,250 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:14
+2021-03-08 10:58:03,250 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:58:03,250 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:58:03,250 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:58:03,250 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:58:03,250 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:58:03,250 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:58:03,250 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:58:03,250 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:58:03,250 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:49
+2021-03-08 10:58:03,250 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:49
+2021-03-08 10:58:03,250 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:2;CloudXdrTopic1.2:4;CloudXdrTopic2.2:8;}
+2021-03-08 10:58:03,251 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:2;CloudXdrTopic1.2:4;CloudXdrTopic2.2:8;}
+2021-03-08 10:58:03,251 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:14;}
+2021-03-08 10:58:03,251 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:14;}
+2021-03-08 10:58:03,251 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:58:03,251 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:58:03,251 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820150502.00673.sms.A', 'FileSize': '16540', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 14, 'CorrectLines': 14, 'ErrorLines': 0, 'SendLines': 14, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '49', 'TopicList': '{CloudXdrTopic0.2:2;CloudXdrTopic1.2:4;CloudXdrTopic2.2:8;}', 'BillDateList': '{20200820:14;}', 'TargetLines': 0}
+2021-03-08 10:58:03,915 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:52] - INFO: insert  result is: 604592bb2799fc4dc8e805ac
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820151412.10685.sms.A
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820151412.10685.sms.A
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:24625
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:24625
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:21
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:21
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:21
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:21
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:21
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:21
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:58:03,916 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:150
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:150
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:9;CloudXdrTopic1.2:3;CloudXdrTopic2.2:9;}
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:9;CloudXdrTopic1.2:3;CloudXdrTopic2.2:9;}
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:21;}
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:21;}
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:58:03,917 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820151412.10685.sms.A', 'FileSize': '24625', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 21, 'CorrectLines': 21, 'ErrorLines': 0, 'SendLines': 21, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '150', 'TopicList': '{CloudXdrTopic0.2:9;CloudXdrTopic1.2:3;CloudXdrTopic2.2:9;}', 'BillDateList': '{20200820:21;}', 'TargetLines': 0}
+2021-03-08 10:58:05,171 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:52] - INFO: insert  result is: 604592bb2799fc4dc8e805ad
+2021-03-08 10:58:05,172 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820151212.00681.sms.A
+2021-03-08 10:58:05,172 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820151212.00681.sms.A
+2021-03-08 10:58:05,172 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:27547
+2021-03-08 10:58:05,172 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:27547
+2021-03-08 10:58:05,172 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:58:05,172 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:58:05,172 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:58:05,173 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:58:05,173 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:58:05,173 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:58:05,173 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:23
+2021-03-08 10:58:05,173 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:23
+2021-03-08 10:58:05,173 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:23
+2021-03-08 10:58:05,173 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:23
+2021-03-08 10:58:05,173 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:58:05,173 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:58:05,174 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:23
+2021-03-08 10:58:05,174 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:23
+2021-03-08 10:58:05,174 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:58:05,174 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:58:05,174 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:58:05,174 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:58:05,174 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:58:05,174 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:58:05,174 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:58:05,175 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:58:05,175 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:152
+2021-03-08 10:58:05,175 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:152
+2021-03-08 10:58:05,175 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:3;CloudXdrTopic1.2:15;CloudXdrTopic2.2:5;}
+2021-03-08 10:58:05,175 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:3;CloudXdrTopic1.2:15;CloudXdrTopic2.2:5;}
+2021-03-08 10:58:05,175 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:23;}
+2021-03-08 10:58:05,175 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:23;}
+2021-03-08 10:58:05,175 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:58:05,175 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:58:05,175 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820151212.00681.sms.A', 'FileSize': '27547', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 23, 'CorrectLines': 23, 'ErrorLines': 0, 'SendLines': 23, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '152', 'TopicList': '{CloudXdrTopic0.2:3;CloudXdrTopic1.2:15;CloudXdrTopic2.2:5;}', 'BillDateList': '{20200820:23;}', 'TargetLines': 0}
+2021-03-08 10:58:05,277 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:52] - INFO: insert  result is: 604592bd2799fc4dc8e805ae
+2021-03-08 10:58:05,277 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820150812.10679.sms.A
+2021-03-08 10:58:05,277 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820150812.10679.sms.A
+2021-03-08 10:58:05,277 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:26055
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:26055
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:22
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:22
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:22
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:22
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:22
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:22
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:58:05,278 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:58:05,279 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:58:05,279 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:58:05,279 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:58:05,279 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:58:05,279 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:58:05,279 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:48
+2021-03-08 10:58:05,279 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:48
+2021-03-08 10:58:05,279 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:4;CloudXdrTopic1.2:5;CloudXdrTopic2.2:13;}
+2021-03-08 10:58:05,279 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:4;CloudXdrTopic1.2:5;CloudXdrTopic2.2:13;}
+2021-03-08 10:58:05,279 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:22;}
+2021-03-08 10:58:05,279 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:22;}
+2021-03-08 10:58:05,279 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:58:05,279 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:58:05,279 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820150812.10679.sms.A', 'FileSize': '26055', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 22, 'CorrectLines': 22, 'ErrorLines': 0, 'SendLines': 22, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '48', 'TopicList': '{CloudXdrTopic0.2:4;CloudXdrTopic1.2:5;CloudXdrTopic2.2:13;}', 'BillDateList': '{20200820:22;}', 'TargetLines': 0}
+2021-03-08 10:58:06,299 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:52] - INFO: insert  result is: 604592bd2799fc4dc8e805af
+2021-03-08 10:58:06,299 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820151538.00685.sms.A
+2021-03-08 10:58:06,299 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820151538.00685.sms.A
+2021-03-08 10:58:06,299 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:31074
+2021-03-08 10:58:06,299 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:31074
+2021-03-08 10:58:06,300 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:58:06,300 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:58:06,300 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:58:06,300 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:58:06,300 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:58:06,300 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:58:06,301 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:26
+2021-03-08 10:58:06,301 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:26
+2021-03-08 10:58:06,301 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:26
+2021-03-08 10:58:06,301 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:26
+2021-03-08 10:58:06,301 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:58:06,301 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:58:06,301 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:26
+2021-03-08 10:58:06,302 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:26
+2021-03-08 10:58:06,302 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:58:06,302 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:58:06,302 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:58:06,302 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:58:06,302 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:58:06,302 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:58:06,302 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:58:06,302 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:58:06,302 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:218
+2021-03-08 10:58:06,302 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:218
+2021-03-08 10:58:06,303 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:5;CloudXdrTopic1.2:11;CloudXdrTopic2.2:10;}
+2021-03-08 10:58:06,303 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:5;CloudXdrTopic1.2:11;CloudXdrTopic2.2:10;}
+2021-03-08 10:58:06,303 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:26;}
+2021-03-08 10:58:06,303 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:26;}
+2021-03-08 10:58:06,303 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:58:06,303 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:58:06,303 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820151538.00685.sms.A', 'FileSize': '31074', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 26, 'CorrectLines': 26, 'ErrorLines': 0, 'SendLines': 26, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '218', 'TopicList': '{CloudXdrTopic0.2:5;CloudXdrTopic1.2:11;CloudXdrTopic2.2:10;}', 'BillDateList': '{20200820:26;}', 'TargetLines': 0}
+2021-03-08 10:58:07,423 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:52] - INFO: insert  result is: 604592be2799fc4dc8e805b0
+2021-03-08 10:58:07,423 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820151703.00687.sms.A
+2021-03-08 10:58:07,423 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820151703.00687.sms.A
+2021-03-08 10:58:07,423 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:21503
+2021-03-08 10:58:07,423 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:21503
+2021-03-08 10:58:07,424 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:58:07,424 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:58:07,424 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:58:07,424 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:58:07,424 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:58:07,424 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:58:07,425 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:18
+2021-03-08 10:58:07,425 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:18
+2021-03-08 10:58:07,425 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:18
+2021-03-08 10:58:07,425 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:18
+2021-03-08 10:58:07,425 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:58:07,425 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:58:07,425 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:18
+2021-03-08 10:58:07,425 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:18
+2021-03-08 10:58:07,425 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:58:07,425 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:58:07,425 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:58:07,426 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:58:07,426 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:58:07,426 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:58:07,426 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:58:07,426 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:58:07,426 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:163
+2021-03-08 10:58:07,426 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:163
+2021-03-08 10:58:07,426 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:6;CloudXdrTopic1.2:6;CloudXdrTopic2.2:6;}
+2021-03-08 10:58:07,426 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:6;CloudXdrTopic1.2:6;CloudXdrTopic2.2:6;}
+2021-03-08 10:58:07,426 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:18;}
+2021-03-08 10:58:07,426 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:18;}
+2021-03-08 10:58:07,426 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:58:07,427 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:58:07,427 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820151703.00687.sms.A', 'FileSize': '21503', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 18, 'CorrectLines': 18, 'ErrorLines': 0, 'SendLines': 18, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '163', 'TopicList': '{CloudXdrTopic0.2:6;CloudXdrTopic1.2:6;CloudXdrTopic2.2:6;}', 'BillDateList': '{20200820:18;}', 'TargetLines': 0}
+2021-03-08 10:58:08,696 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:52] - INFO: insert  result is: 604592bf2799fc4dc8e805b1
+2021-03-08 10:58:08,697 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM-3_20200820151828.00688.sms.A
+2021-03-08 10:58:08,697 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM-3_20200820151828.00688.sms.A
+2021-03-08 10:58:08,697 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:22443
+2021-03-08 10:58:08,697 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:22443
+2021-03-08 10:58:08,697 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:58:08,697 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:58:08,697 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:58:08,698 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:58:08,698 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:58:08,698 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:58:08,698 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:19
+2021-03-08 10:58:08,698 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:19
+2021-03-08 10:58:08,698 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:19
+2021-03-08 10:58:08,698 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:19
+2021-03-08 10:58:08,698 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:58:08,699 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:58:08,699 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:19
+2021-03-08 10:58:08,699 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:19
+2021-03-08 10:58:08,699 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:58:08,699 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:58:08,699 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:58:08,699 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:58:08,699 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:58:08,699 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:58:08,699 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190420
+2021-03-08 10:58:08,699 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190420
+2021-03-08 10:58:08,700 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:169
+2021-03-08 10:58:08,700 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:169
+2021-03-08 10:58:08,700 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:6;CloudXdrTopic1.2:7;CloudXdrTopic2.2:6;}
+2021-03-08 10:58:08,700 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:6;CloudXdrTopic1.2:7;CloudXdrTopic2.2:6;}
+2021-03-08 10:58:08,700 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:19;}
+2021-03-08 10:58:08,700 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:19;}
+2021-03-08 10:58:08,700 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:58:08,700 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:58:08,700 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM-3_20200820151828.00688.sms.A', 'FileSize': '22443', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 19, 'CorrectLines': 19, 'ErrorLines': 0, 'SendLines': 19, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190420', 'Speed': '169', 'TopicList': '{CloudXdrTopic0.2:6;CloudXdrTopic1.2:7;CloudXdrTopic2.2:6;}', 'BillDateList': '{20200820:19;}', 'TargetLines': 0}
+2021-03-08 10:58:09,201 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:52] - INFO: insert  result is: 604592c02799fc4dc8e805b2
+2021-03-08 10:58:09,201 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:H_GYM_NoTimeOut-3_20200820144011.10632.sms.A
+2021-03-08 10:58:09,201 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:H_GYM_NoTimeOut-3_20200820144011.10632.sms.A
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:8264
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:8264
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:7
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:7
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:7
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:7
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:7
+2021-03-08 10:58:09,202 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:7
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190421
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190421
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:66
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:66
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:3;CloudXdrTopic1.2:2;CloudXdrTopic2.2:2;}
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:3;CloudXdrTopic1.2:2;CloudXdrTopic2.2:2;}
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:7;}
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:7;}
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:58:09,203 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'H_GYM_NoTimeOut-3_20200820144011.10632.sms.A', 'FileSize': '8264', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 7, 'CorrectLines': 7, 'ErrorLines': 0, 'SendLines': 7, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190421', 'Speed': '66', 'TopicList': '{CloudXdrTopic0.2:3;CloudXdrTopic1.2:2;CloudXdrTopic2.2:2;}', 'BillDateList': '{20200820:7;}', 'TargetLines': 0}
+2021-03-08 10:58:09,612 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:52] - INFO: insert  result is: 604592c12799fc4dc8e805b3
+2021-03-08 10:58:09,612 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:58:09,612 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:58:09,612 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:17426
+2021-03-08 10:58:09,612 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:17426
+2021-03-08 10:58:09,613 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:58:09,613 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:58:09,613 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:58:09,613 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:58:09,613 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:58:09,613 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:58:09,613 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:15
+2021-03-08 10:58:09,613 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:15
+2021-03-08 10:58:09,614 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:15
+2021-03-08 10:58:09,614 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:15
+2021-03-08 10:58:09,614 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:58:09,614 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:58:09,614 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:15
+2021-03-08 10:58:09,614 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:15
+2021-03-08 10:58:09,614 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:58:09,614 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:58:09,614 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:58:09,614 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:58:09,614 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:58:09,615 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:58:09,615 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190421
+2021-03-08 10:58:09,615 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190421
+2021-03-08 10:58:09,615 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:131
+2021-03-08 10:58:09,615 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:131
+2021-03-08 10:58:09,615 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:58:09,615 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:58:09,615 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:15;}
+2021-03-08 10:58:09,615 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:15;}
+2021-03-08 10:58:09,615 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:58:09,615 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:58:09,615 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'TimeOut_H_1_20200820.15312701408.sms.A', 'FileSize': '17426', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 15, 'CorrectLines': 15, 'ErrorLines': 0, 'SendLines': 15, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190421', 'Speed': '131', 'TopicList': '{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}', 'BillDateList': '{20200820:15;}', 'TargetLines': 0}
+2021-03-08 10:58:12,402 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:52] - INFO: insert  result is: 604592c12799fc4dc8e805b4
+2021-03-08 10:58:12,403 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:58:12,403 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:58:12,403 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:17426
+2021-03-08 10:58:12,403 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:17426
+2021-03-08 10:58:12,403 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:58:12,403 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:58:12,403 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:58:12,404 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:58:12,404 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:58:12,404 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:58:12,404 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:15
+2021-03-08 10:58:12,404 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:15
+2021-03-08 10:58:12,404 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:15
+2021-03-08 10:58:12,404 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:15
+2021-03-08 10:58:12,404 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:58:12,404 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:58:12,405 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:15
+2021-03-08 10:58:12,405 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:15
+2021-03-08 10:58:12,405 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:58:12,405 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:58:12,405 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:58:12,405 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:58:12,405 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:58:12,405 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:58:12,405 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190421
+2021-03-08 10:58:12,405 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190421
+2021-03-08 10:58:12,405 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:131
+2021-03-08 10:58:12,406 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:131
+2021-03-08 10:58:12,406 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:58:12,406 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:58:12,406 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:15;}
+2021-03-08 10:58:12,406 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:15;}
+2021-03-08 10:58:12,406 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:58:12,406 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:58:12,406 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'TimeOut_H_1_20200820.15312701408.sms.A', 'FileSize': '17426', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 15, 'CorrectLines': 15, 'ErrorLines': 0, 'SendLines': 15, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190421', 'Speed': '131', 'TopicList': '{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}', 'BillDateList': '{20200820:15;}', 'TargetLines': 0}
+2021-03-08 10:58:14,643 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:52] - INFO: insert  result is: 604592c42799fc4dc8e805b5
+2021-03-08 10:58:14,643 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:58:14,643 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:58:14,644 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:17426
+2021-03-08 10:58:14,644 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:17426
+2021-03-08 10:58:14,644 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:58:14,644 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:58:14,644 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:58:14,644 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:58:14,644 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:58:14,644 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:58:14,644 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:15
+2021-03-08 10:58:14,644 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:15
+2021-03-08 10:58:14,644 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:15
+2021-03-08 10:58:14,645 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:15
+2021-03-08 10:58:14,645 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:58:14,645 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:58:14,645 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:15
+2021-03-08 10:58:14,645 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:15
+2021-03-08 10:58:14,645 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:58:14,645 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:58:14,645 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:58:14,645 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:58:14,645 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:58:14,645 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:58:14,645 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190421
+2021-03-08 10:58:14,646 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190421
+2021-03-08 10:58:14,646 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:131
+2021-03-08 10:58:14,646 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:131
+2021-03-08 10:58:14,646 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:58:14,646 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:58:14,646 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:15;}
+2021-03-08 10:58:14,646 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:15;}
+2021-03-08 10:58:14,646 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:58:14,646 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:58:14,646 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'TimeOut_H_1_20200820.15312701408.sms.A', 'FileSize': '17426', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 15, 'CorrectLines': 15, 'ErrorLines': 0, 'SendLines': 15, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190421', 'Speed': '131', 'TopicList': '{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}', 'BillDateList': '{20200820:15;}', 'TargetLines': 0}
+2021-03-08 10:58:15,194 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:52] - INFO: insert  result is: 604592c62799fc4dc8e805b6
+2021-03-08 10:58:15,194 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:58:15,194 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileName:TimeOut_H_1_20200820.15312701408.sms.A
+2021-03-08 10:58:15,195 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is FileSize:17426
+2021-03-08 10:58:15,195 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is FileSize:17426
+2021-03-08 10:58:15,195 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Earlist:20200820
+2021-03-08 10:58:15,195 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Earlist:20200820
+2021-03-08 10:58:15,195 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is latest:20200820
+2021-03-08 10:58:15,195 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is latest:20200820
+2021-03-08 10:58:15,195 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ExtALines:0
+2021-03-08 10:58:15,195 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ExtALines:0
+2021-03-08 10:58:15,195 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TotalLines:15
+2021-03-08 10:58:15,195 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TotalLines:15
+2021-03-08 10:58:15,196 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is CorrectLines:15
+2021-03-08 10:58:15,196 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is CorrectLines:15
+2021-03-08 10:58:15,196 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is ErrorLines:0
+2021-03-08 10:58:15,196 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is ErrorLines:0
+2021-03-08 10:58:15,196 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is SendLines:15
+2021-03-08 10:58:15,196 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is SendLines:15
+2021-03-08 10:58:15,196 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is NonTimeoutExceptionLines:0
+2021-03-08 10:58:15,196 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is NonTimeoutExceptionLines:0
+2021-03-08 10:58:15,196 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TimeoutExceptionLines:0
+2021-03-08 10:58:15,196 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TimeoutExceptionLines:0
+2021-03-08 10:58:15,196 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is StartTime:20201216190420
+2021-03-08 10:58:15,197 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is StartTime:20201216190420
+2021-03-08 10:58:15,197 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is EndTime:20201216190421
+2021-03-08 10:58:15,197 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is EndTime:20201216190421
+2021-03-08 10:58:15,197 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is Speed:131
+2021-03-08 10:58:15,197 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is Speed:131
+2021-03-08 10:58:15,197 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:58:15,197 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TopicList:{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}
+2021-03-08 10:58:15,197 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:30] - DEBUG: in if tmp is : BillDateList:{20200820:15;}
+2021-03-08 10:58:15,197 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is BillDateList:{20200820:15;}
+2021-03-08 10:58:15,197 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:20] - DEBUG: line is TargetLines:0
+2021-03-08 10:58:15,197 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:45] - DEBUG: key and value is TargetLines:0
+2021-03-08 10:58:15,197 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/emit/emit_stat_load.py[line:34] - DEBUG: stat_dic is : {'FileName': 'TimeOut_H_1_20200820.15312701408.sms.A', 'FileSize': '17426', 'Earlist': '20200820', 'latest': '20200820', 'ExtALines': 0, 'TotalLines': 15, 'CorrectLines': 15, 'ErrorLines': 0, 'SendLines': 15, 'NonTimeoutExceptionLines': 0, 'TimeoutExceptionLines': 0, 'StartTime': '20201216190420', 'EndTime': '20201216190421', 'Speed': '131', 'TopicList': '{CloudXdrTopic0.2:7;CloudXdrTopic1.2:3;CloudXdrTopic2.2:5;}', 'BillDateList': '{20200820:15;}', 'TargetLines': 0}
+2021-03-08 10:58:15,545 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:52] - INFO: insert  result is: 604592c72799fc4dc8e805b7
+2021-03-08 10:58:15,545 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/tool/stat_util.py[line:27] - INFO: conditon is: {'FileName': '/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt'}, doc is : {'$set': {'Status': 'finish', 'FileLineNumber': 12, 'EndTime': '2021-03-08 10:58:15.545699', 'FileModifyTime': 1612161127.843655}}
+2021-03-08 10:58:15,735 - /Users/mtr/PycharmProjects/mongoQuery/com/asiainfo/mongoapp/mongo/mongo_writer.py[line:96] - INFO: update: test.stat_emit_in condition is {'FileName': '/Users/mtr/PycharmProjects/mongoQuery/resource/emit/xdrEmit_stat_emit33_4214_2020121619.txt'}  to  {'$set': {'Status': 'finish', 'FileLineNumber': 12, 'EndTime': '2021-03-08 10:58:15.545699', 'FileModifyTime': 1612161127.843655}}   result is: 1

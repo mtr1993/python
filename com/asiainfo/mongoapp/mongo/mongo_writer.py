@@ -2,7 +2,6 @@ from pymongo import MongoClient
 from pymongo import collection
 import logging
 import traceback
-logging.basicConfig(level=logging.DEBUG)
 
 
 class mongo_writer:
@@ -97,7 +96,6 @@ def conn_update(db_client, database, coll, condition, new_values, upsert):
         logging.info(f'update: {database}.{coll} condition is {condition} '
                      f' to  {new_values}   result is: {result.modified_count}')
     except Exception as e:
-        traceback.print_exception(e)
         logging.error(f"exception is: {e}")
 
 
@@ -136,7 +134,10 @@ def auth(usr, passwd, host_ip, port):
     # 连接mongodb数据库,账号密码认证
     db_client = mongo_client.admin  # 先连接系统默认数据库admin
     # 进行密码认证  让admin数据库去认证密码登录
-    db_client.authenticate(usr, passwd, mechanism='SCRAM-SHA-1')
+    try:
+        db_client.authenticate(usr, passwd, mechanism='SCRAM-SHA-1')
+    except Exception as e:
+        logging.error(f'db auth get Excep {e}')
     return mongo_client
 
 

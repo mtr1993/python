@@ -3,9 +3,12 @@ import logging
 import re
 
 from asiainfo.mongoapp.mongo import mongo_writer
-from asiainfo.mongoapp.load import stat_load
+from asiainfo.mongoapp.tool import stat_util, tool_util
 
-logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG,
+#                     # filename='/Users/mtr/PycharmProjects/mongoQuery/resource/log/recv_stat_load.log',
+#                     filemode='a',
+#                     format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
 
 def test():
@@ -91,26 +94,26 @@ def update_dic(service_info_list, file_name, function_name):
     return dic
 
 
-# insert stat
-def insert_stat(mongo_client, stat_db_name, stat_coll_name, filename, file_modify_time_from_path):
-    start_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-    status = 'start'
-    line_number = '-1'
-    condition = {"FileName": filename}
-    doc = {"$set": {'StartTime': start_time, 'Status': status, 'FileLineNumber': line_number,
-                    'FileName': filename, "FileModifyTime": file_modify_time_from_path}}
-    writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
-
-
-# update stat
-def update_stat(mongo_client, stat_db_name, stat_coll_name, filename, line_number, file_modify_time_from_path):
-    end_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-    status = 'finish'
-    condition = {"FileName": filename}
-    doc = {"$set": {'Status': status, 'FileLineNumber': line_number, 'EndTime': end_time,
-                    "FileModifyTime": file_modify_time_from_path}}
-    logging.info(f'conditon is: {condition}, doc is : {doc}')
-    writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
+# # insert stat
+# def insert_stat(mongo_client, stat_db_name, stat_coll_name, filename, file_modify_time_from_path):
+#     start_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+#     status = 'start'
+#     line_number = '-1'
+#     condition = {"FileName": filename}
+#     doc = {"$set": {'StartTime': start_time, 'Status': status, 'FileLineNumber': line_number,
+#                     'FileName': filename, "FileModifyTime": file_modify_time_from_path}}
+#     writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
+#
+#
+# # update stat
+# def update_stat(mongo_client, stat_db_name, stat_coll_name, filename, line_number, file_modify_time_from_path):
+#     end_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+#     status = 'finish'
+#     condition = {"FileName": filename}
+#     doc = {"$set": {'Status': status, 'FileLineNumber': line_number, 'EndTime': end_time,
+#                     "FileModifyTime": file_modify_time_from_path}}
+#     logging.info(f'conditon is: {condition}, doc is : {doc}')
+#     writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
 
 
 if __name__ == '__main__':
@@ -121,22 +124,21 @@ if __name__ == '__main__':
     mongos_host = '10.19.85.33'
     mongos_port = 34000
     db_name = 'test'
-    coll_name = 'stat_service_20210208'
-    writer = mongo_writer
-    client = writer.auth(username, password, mongos_host, mongos_port)
+    coll_name = 'stat_service'
+    client = mongo_writer.auth(username, password, mongos_host, mongos_port)
     stat_db = "test"
-    stat_coll = "service_stat_load_stat_" + stat_load.get_date(0)
-    path = '/resource/xdr_service'
+    stat_coll = "service_stat_in"
+    path = '/Users/mtr/PycharmProjects/mongoQuery/resource/xdr_service'
     regex = 'service'
     func_name = 'xdr_service'
 
-    file_info_dic_from_path = stat_load.get_file_info(path, regex)
-    deal_file_dic = stat_load.get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
+    file_info_dic_from_path = tool_util.get_file_info(path, regex)
+    deal_file_dic = tool_util.get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
 
     for name, num in deal_file_dic.items():
         file_modify_time = file_info_dic_from_path.get(name)
-        insert_stat(client, stat_db, stat_coll, name, file_modify_time)
-        service_log_list = stat_load.read_stat_info(name, num)
+        stat_util.insert_stat(mongo_writer, client, stat_db, stat_coll, name, file_modify_time)
+        service_log_list = tool_util.read_stat_info(name, num)
         combine_service_stat(client, db_name, coll_name, func_name, service_log_list, name)
-        update_stat(client, stat_db, stat_coll, name, num + len(service_log_list), file_modify_time)
+        stat_util.update_stat(mongo_writer, client, stat_db, stat_coll, name, num + len(service_log_list), file_modify_time)
     print('-----')

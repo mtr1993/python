@@ -1,8 +1,13 @@
 import re
-import stat_load
 import logging
 import datetime
 from asiainfo.mongoapp.mongo import mongo_writer
+from asiainfo.mongoapp.tool import tool_util, stat_util
+
+logging.basicConfig(level=logging.DEBUG,
+                    # filename='/Users/mtr/PycharmProjects/mongoQuery/resource/log/exception_stat_load.log',
+                    filemode='a',
+                    format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
 
 def test():
@@ -21,18 +26,18 @@ def test():
     #             '[spring.profiles.active].. Returning null'
     # logging.info(f'{file_dic}')
     excep_pattern = re.compile(r'[A-Za-z.]*Exception')
-    print(excep_pattern)
+    logging.debug(f'excep_pattern is {excep_pattern}')
     result = excep_pattern.findall(excep_log)
-    print(result)
+    logging.debug(f'result is {result}')
     date_pattern = re.compile(r'(\d{4}-\d{1,2}-\d{1,2}\s\d{1,2}:\d{1,2}:\d{1,2}[,|.]\d+)')
     date = date_pattern.findall(excep_log)
-    print(date)
+    logging.debug(f'date is {date}')
 
 
 def excep_load_test(db_client, db, coll, log_path, file_regex, function_name):
     excep_pattern = re.compile(r'[A-Za-z.]*Exception')
     date_pattern = re.compile(r'(\d{4}-\d{1,2}-\d{1,2}\s\d{1,2}:\d{1,2}:\d{1,2}[,|.]\d+)')
-    file_dic = stat_load.get_file_info(log_path, file_regex)
+    file_dic = tool_util.get_file_info(log_path, file_regex)
     now_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
     # logging.info(f'{file_dic}')
     for file_name in file_dic.keys():
@@ -50,7 +55,7 @@ def excep_load_test(db_client, db, coll, log_path, file_regex, function_name):
                     # logging.info(exception_info)
                     excep_dic = update_dic(time_info[0], excep_type[0], exception_info, file_name, function_name)
                     mongo_writer.conn_insertone(db_client, db, coll, excep_dic)
-                    logging.info(excep_dic)
+                    logging.debug(f'excep_dic is {excep_dic}')
 
 
 # exception解析入库 解析异常类型和时间 包含异常信息的整条日志
@@ -76,7 +81,7 @@ def combine_excep_stat(db_client, db, coll, function_name, exception_info_list, 
                 # logging.info(exception_info)
                 excep_dic = update_dic(time_info[0], excep_type[0], exception_info, file_name, function_name)
                 mongo_writer.conn_insertone(db_client, db, coll, excep_dic)
-                logging.info(excep_dic)
+                logging.debug(f'excep_dic is {excep_dic}')
 
 
 def update_dic(time_info, excep_type, exception_info, file_name, function_name):
@@ -88,28 +93,7 @@ def update_dic(time_info, excep_type, exception_info, file_name, function_name):
     return dic
 
 
-# insert stat
-def insert_stat(mongo_client, stat_db_name, stat_coll_name, filename, file_modify_time_from_path):
-    start_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-    status = 'start'
-    line_number = '-1'
-    condition = {"FileName": filename}
-    doc = {"$set": {'StartTime': start_time, 'Status': status, 'FileLineNumber': line_number,
-                    'FileName': filename, "FileModifyTime": file_modify_time_from_path}}
-    writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
-
-
-# update stat
-def update_stat(mongo_client, stat_db_name, stat_coll_name, filename, line_number, file_modify_time_from_path):
-    end_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-    status = 'finish'
-    condition = {"FileName": filename}
-    doc = {"$set": {'Status': status, 'FileLineNumber': line_number, 'EndTime': end_time,
-                    "FileModifyTime": file_modify_time_from_path}}
-    logging.info(f'conditon is: {condition}, doc is : {doc}')
-    writer.conn_update(mongo_client, stat_db_name, stat_coll_name, condition, doc, True)
-
-
+# regex path可配置 ，进行path和regex遍历  进行多种异常文件处理入库
 if __name__ == '__main__':
     # 数据库认证
     username = 'root'
@@ -117,23 +101,24 @@ if __name__ == '__main__':
     mongos_host = '10.19.85.33'
     mongos_port = 34000
     db_name = 'test'
-    coll_name = 'stat_excep_20210129'
-    writer = mongo_writer
-    client = writer.auth(username, password, mongos_host, mongos_port)
+    coll_name = 'stat_excep'
+    client = mongo_writer.auth(username, password, mongos_host, mongos_port)
     stat_db = "test"
-    stat_coll = "excep_stat_load_stat_" + stat_load.get_date(0)
-    path = '/resource/exception'
+    stat_coll = "stat_excep_in"
+    path = '/Users/mtr/PycharmProjects/mongoQuery/resource/exception'
     regex = 'catalina'
     func_name = 'emit'
     # excep_load(client, db_name, coll_name, path, regex, func_name)
 
-    file_info_dic_from_path = stat_load.get_file_info(path, regex)
-    deal_file_dic = stat_load.get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
+    logging.info(f'exception_stat_load start, path is {path}, regex is {regex}')
+    file_info_dic_from_path = tool_util.get_file_info(path, regex)
+    deal_file_dic = tool_util.get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
 
     for name, num in deal_file_dic.items():
         file_modify_time = file_info_dic_from_path.get(name)
-        insert_stat(client, stat_db, stat_coll, name, file_modify_time)
-        exceptinfo_list = stat_load.read_stat_info(name, num)
+        stat_util.insert_stat(mongo_writer, client, stat_db, stat_coll, name, file_modify_time)
+        exceptinfo_list = tool_util.read_stat_info(name, num)
         combine_excep_stat(client, db_name, coll_name, func_name, exceptinfo_list, name)
-        update_stat(client, stat_db, stat_coll, name, num + len(exceptinfo_list), file_modify_time)
-    print('-----')
+        stat_util.update_stat(mongo_writer, client, stat_db, stat_coll, name,
+                              num + len(exceptinfo_list), file_modify_time)
+    logging.info('exception_stat_load end')
