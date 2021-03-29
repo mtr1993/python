@@ -89,7 +89,8 @@ def update_dic(time_info, excep_type, exception_info, file_name, function_name):
                 "ExceptionInfo": exception_info,
                 "ExceptionTime": time_info,
                 "FileName": file_name,
-                "FunctionName": function_name})
+                "FunctionName": function_name,
+                "Ip": "10.19.85.33"})
     return dic
 
 
@@ -104,14 +105,15 @@ if __name__ == '__main__':
     coll_name = 'stat_excep'
     client = mongo_writer.auth(username, password, mongos_host, mongos_port)
     stat_db = "test"
-    stat_coll = "stat_excep_in"
+    stat_coll = "stat_excepstat_in"
     path = '/Users/mtr/PycharmProjects/mongoQuery/resource/exception'
-    regex = 'catalina'
+    regex = 'Emit'
     func_name = 'emit'
+    before_day = 30
     # excep_load(client, db_name, coll_name, path, regex, func_name)
 
     logging.info(f'exception_stat_load start, path is {path}, regex is {regex}')
-    file_info_dic_from_path = tool_util.get_file_info(path, regex)
+    file_info_dic_from_path = tool_util.get_file_info(path, regex, before_day)
     deal_file_dic = tool_util.get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
 
     for name, num in deal_file_dic.items():

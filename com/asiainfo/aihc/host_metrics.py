@@ -12,6 +12,7 @@ import sys
 import time
 import datetime
 import operator
+import httplib
 import logging
 import socket
 import random
@@ -231,8 +232,6 @@ def network_io_kbitps():
             retdict2[name2] = (bytes_recv2, bytes_sent2)
 
     retdict = merge_with(retdict2, retdict1)
-    print
-    retdict
     return retdict
 
 
@@ -311,7 +310,7 @@ def all_index():
         disk_io_Kbps(),
         network_io_kbitps(),
         get_load(),
-        get_tcp_status(),
+        # get_tcp_status(),
         get_proc_number()
     )
 
@@ -351,14 +350,14 @@ def get_cpu_forecast():
 
 
 def collector():
-    timestamp, cpu, mem, disk, disk_io, net, load, tcp_status, process_number = all_index()
+    timestamp, cpu, mem, disk, disk_io, net, load, process_number = all_index()
     disk_utilization = ''
     disk_io_read = ''
     disk_io_write = ''
     internet_networkrx = ''
     internet_networktx = ''
     tcp_status_count = ''
-    #tcp_status = None
+    tcp_status = None
     period_1 = ''
     period_5 = ''
     period_15 = ''

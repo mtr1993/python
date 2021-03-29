@@ -70,7 +70,8 @@ if __name__ == '__main__':
     path = '/Users/mtr/PycharmProjects/mongoQuery/resource/emit'
     regex = 'emit'
     logging.info(f'start emit load, path is {path}')
-    file_info_dic_from_path = tool_util.get_file_info(path, regex)
+    before_day = 1
+    file_info_dic_from_path = tool_util.get_file_info(path, regex, before_day)
     file_dic = tool_util.get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
     for name, num in file_dic.items():
         file_modify_time = file_info_dic_from_path.get(name)

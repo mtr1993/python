@@ -1,7 +1,6 @@
 # coding=utf-8
 
 import os
-import time
 import psycopg2
 import numpy
 import json as JSON
@@ -9,26 +8,17 @@ import datetime
 
 from jinja2 import Environment, FileSystemLoader
 
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from email.mime.image import MIMEImage
-from email.mime.base import MIMEBase
-from email import encoders
-
-from doc.document import Document
 from doc.chapter import Chapter
+from publisher import ScriptExecutor, Publisher
+from doc.document import Document
 
 from pyecharts import options as opts
 from pyecharts.charts import Grid, Line, Pie
-from pyecharts.globals import ThemeType
 from pyecharts.commons import utils
 from pyecharts.render import make_snapshot
 from snapshot_phantomjs import snapshot
-from publisher import *
 
 import paramiko
-import platform
 
 global roboter
 global logger
@@ -233,7 +223,7 @@ def get_disk_space(publisher, hosts, index, db_connect):
     executor = ScriptExecutor(publisher)
 
     script_id, script_name, script_type, timeout = get_partol_script_info(Conf.script_file, 'disk_space', db_connect)
-
+    logger.info(f"script_id is {script_id}, script_name is {script_name}, script_type is {script_type}, timeout is {timeout}")
     try:
         executor.begin()
 
@@ -242,6 +232,7 @@ def get_disk_space(publisher, hosts, index, db_connect):
                         script_type=script_type,
                         timeout=timeout)
         for host in hosts:
+            logger.info(f"host is {host}, script_id is {script_id}, script_name is {script_name}, script_type is {script_type}, timeout is {timeout}")
             executor.change_destination(host.get('ip'), ip_addr=True).call()
 
         messages = executor.fetchall()
@@ -302,7 +293,7 @@ def get_host_apps(publisher, hosts, db_connect):
     executor = ScriptExecutor(publisher)
 
     script_id, script_name, script_type, timeout = get_partol_script_info(Conf.script_file, 'host_apps', db_connect)
-
+    logger.info(f"script_id is {script_id}, script_name is {script_name}, script_type is {script_type}, timeout is {timeout}")
     try:
         executor.begin()
 
@@ -311,6 +302,7 @@ def get_host_apps(publisher, hosts, db_connect):
                         script_type=script_type,
                         timeout=timeout)
         for host in hosts:
+            logger.info(f"host is {host}, script_id is {script_id}, script_name is {script_name}, script_type is {script_type}, timeout is {timeout}")
             executor.change_destination(host.get('ip'), ip_addr=True).call()
 
         messages = executor.fetchall()
@@ -322,8 +314,8 @@ def get_host_apps(publisher, hosts, db_connect):
                     result = JSON.loads(message.get_body())
                     host_apps[message.get_header_value('performer')] = result
                 except Exception:
-                    logger.info(message.get_headers())
-                    logger.info(result)
+                    logger.error(f"message.get_headers()  is {message.get_headers()}")
+                    logger.error(f"body is {result}")
                     continue
 
                 # host_apps[message.get_header_value('performer')] = result

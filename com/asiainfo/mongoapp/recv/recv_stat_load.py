@@ -42,19 +42,19 @@ def init_file_deal_dic(file_info_from_path: dict):
     logging.debug(f'file_deal_dic is: {file_deal_dic}')
     return file_deal_dic
 
-
-# 获取对应目录下文件和最后修改时间
-def get_file_info(file_path, file_regex):
-    file_info_dic = {}
-    for file_name in os.listdir(file_path):
-        if not file_name.__contains__(file_regex):
-            continue
-        full_name = os.path.join(file_path, file_name)
-        logging.debug(f' full_name is {full_name}')
-        if os.path.isfile(full_name):
-            file_info_dic[full_name] = os.path.getmtime(full_name)
-    logging.info(f' file_info_dic is {file_info_dic}')
-    return file_info_dic
+#
+# # 获取对应目录下文件和最后修改时间
+# def get_file_info(file_path, file_regex):
+#     file_info_dic = {}
+#     for file_name in os.listdir(file_path):
+#         if not file_name.__contains__(file_regex):
+#             continue
+#         full_name = os.path.join(file_path, file_name)
+#         logging.debug(f' full_name is {full_name}')
+#         if os.path.isfile(full_name):
+#             file_info_dic[full_name] = os.path.getmtime(full_name)
+#     logging.info(f' file_info_dic is {file_info_dic}')
+#     return file_info_dic
 
 
 # # 读取stat文件中信息
@@ -142,8 +142,9 @@ if __name__ == '__main__':
     # 读文件获取stat文件信息入库
     path = '/Users/mtr/PycharmProjects/mongoQuery/resource/recv'
     regex = 'recv'
+    date_before = 1
     logging.info(f'recv_stat_load start, path is {path}, regex is {regex}')
-    file_info_dic_from_path = get_file_info(path, regex)
+    file_info_dic_from_path = tool_util.get_file_info(path, regex, date_before)
     file_dic = tool_util.get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
     for name, num in file_dic.items():
         file_modify_time = file_info_dic_from_path.get(name)

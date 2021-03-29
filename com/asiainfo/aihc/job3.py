@@ -170,10 +170,12 @@ if __name__ == '__main__':
     logger.addHandler(handler)
 
     require = config.getValue('common', 'exec_file')
+    print(f'require is {require}')
     if require is not None:
         roboter = Robot(debug, config)
         try:
             module = os.path.expandvars(require)
+            print(f'module is {module}')
             file = open(module)
             code = compile(file.read(), module, 'exec')
             exec (code)

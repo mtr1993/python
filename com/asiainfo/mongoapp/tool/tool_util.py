@@ -1,13 +1,13 @@
+import datetime
 import logging
 import os
-import datetime
-
-
 # 获取前before_day的日期
 import socket
+import time
 from itertools import islice
 
 from asiainfo.mongoapp.mongo import mongo_writer
+
 # logging.basicConfig(level=logging.INFO,
 #                     filename='/Users/mtr/PycharmProjects/mongoQuery/resource/log/tool_util.log',
 #                     filemode='a',
@@ -22,8 +22,23 @@ def get_date(before_day):
     return date
 
 
+def get_now_time():
+    now = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
+    return now
+
+def get_date_mills(before_day):
+    today = datetime.datetime.now()
+    offset = datetime.timedelta(days=-before_day)
+    date = (today + offset).strftime('%Y-%m-%d %H:%M:%S')
+    # dt = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    ts = int(time.mktime(time.strptime(date, "%Y-%m-%d %H:%M:%S")))
+    logging.info(f'day_mills  is {ts}')
+    return ts
+
+
 # 获取对应目录下文件和最后修改时间
-def get_file_info(file_path, file_regex):
+def get_file_info(file_path, file_regex, before_day):
+    deal_time = get_date_mills(before_day)
     file_info_dic = {}
     for file_name in os.listdir(file_path):
         if not file_name.__contains__(file_regex):
@@ -31,7 +46,10 @@ def get_file_info(file_path, file_regex):
         full_name = os.path.join(file_path, file_name)
         logging.debug(f' full_name is {full_name}')
         if os.path.isfile(full_name):
-            file_info_dic[full_name] = os.path.getmtime(full_name)
+            file_time = os.path.getmtime(full_name)
+            logging.debug(f'{file_name} modify time is {file_time}  compare to  {deal_time}')
+            if file_time > deal_time:
+                file_info_dic[full_name] = file_time
     logging.info(f' file_info_dic is {file_info_dic}')
     return file_info_dic
 
@@ -39,18 +57,20 @@ def get_file_info(file_path, file_regex):
 # 读取stat文件中信息
 def read_stat_info(file_name, line_index):
     stat_list = []
-    with open(file_name, 'r', encoding='utf-8', errors='ignore') as f_input:
-        for stat_line_str in islice(f_input, line_index + 1, None):
-            stat_line_str = stat_line_str.strip('\n')
-            stat_list.append(stat_line_str)
-            logging.info(f'stat_line_str is: {stat_line_str}')
-
+    try:
+        with open(file_name, 'r', encoding='utf-8', errors='ignore') as f_input:
+            for stat_line_str in islice(f_input, line_index + 1, None):
+                stat_line_str = stat_line_str.strip('\n')
+                stat_list.append(stat_line_str)
+                logging.info(f'stat_line_str is: {stat_line_str}')
+    except Exception as e:
+        pass
     return stat_list
 
 
 # 查询stat入库的任务stat信息,和filepath路径下文件比对，获取需要增量处理的stat文件名和行号
-def get_deal_file_dic(mongo_client, stat_db_name, stat_coll_name, file_info_dic):
-    condition = {'Status': 'finish'}
+def get_deal_file_dic(mongo_client, stat_db_name, stat_coll_name, file_info_dic, ip):
+    condition = {'Ip': ip}
     file_deal_dic = init_file_deal_dic(file_info_dic)
     result_list = mongo_writer.conn_query(mongo_client, stat_db_name, stat_coll_name, condition)
     logging.info(f'result_list is {result_list}')
@@ -65,7 +85,6 @@ def get_deal_file_dic(mongo_client, stat_db_name, stat_coll_name, file_info_dic)
                           f'， file_line_number is {file_line_number}')
             if file_modify_time_from_stat is not None and file_modify_time_from_stat == file_modify_time_from_path:
                 file_deal_dic.pop(file_name)
-                continue
             else:
                 file_deal_dic.update({file_name: file_line_number})
     logging.info(f'file_deal_dic is {file_deal_dic}')
@@ -81,7 +100,7 @@ def init_file_deal_dic(file_info_from_path: dict):
     return file_deal_dic
 
 
-# 获取计算机名称
+# 获取主机Ip地址
 def get_ip():
     hostname = socket.gethostname()
     # 获取本机IP

@@ -13,9 +13,9 @@ import json
 def query(client, db_name, coll_name,  start_time, end_time, period):
     # end_time = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
     # start_time = (datetime.datetime.now() + datetime.timedelta(minutes=period)).strftime('%Y%m%d%H%M%S')
-    aggregate_sql = ('[{"$match":{"StartTime":{"$gte":"starttime","$lte":"endtime"}}},'
+    aggregate_sql = ('[{"$match":{"startTime":{"$gte":"starttime","$lte":"endtime"}}},'
                      '{"$group":{"_id":null,'
-                     '"TotalLines":{"$sum":"$TotalLines"}}}]')
+                     '"TotalLines":{"$sum":1}}}]')
     aggregate_sql = aggregate_sql.replace("starttime", str(start_time)).replace("endtime", str(end_time))
     logging.info(f'aggregate_sql is {aggregate_sql}')
     aggregate_sql_list = json.loads(aggregate_sql)
@@ -25,7 +25,7 @@ def query(client, db_name, coll_name,  start_time, end_time, period):
         speed = 0
     else:
         speed = result_list[0].get("TotalLines") / period
-    logging.info(f"speed : {speed} 条/秒")
+    logging.info(f"speed : {speed} 个/秒")
     return speed
 
 

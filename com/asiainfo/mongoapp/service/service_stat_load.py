@@ -5,10 +5,10 @@ import re
 from asiainfo.mongoapp.mongo import mongo_writer
 from asiainfo.mongoapp.tool import stat_util, tool_util
 
-# logging.basicConfig(level=logging.DEBUG,
-#                     # filename='/Users/mtr/PycharmProjects/mongoQuery/resource/log/recv_stat_load.log',
-#                     filemode='a',
-#                     format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s')
+logging.basicConfig(level=logging.DEBUG,
+                    # filename='/Users/mtr/PycharmProjects/mongoQuery/resource/log/recv_stat_load.log',
+                    filemode='a',
+                    format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
 
 def test():
@@ -131,8 +131,9 @@ if __name__ == '__main__':
     path = '/Users/mtr/PycharmProjects/mongoQuery/resource/xdr_service'
     regex = 'service'
     func_name = 'xdr_service'
+    day_before = 1
 
-    file_info_dic_from_path = tool_util.get_file_info(path, regex)
+    file_info_dic_from_path = tool_util.get_file_info(path, regex, day_before)
     deal_file_dic = tool_util.get_deal_file_dic(client, stat_db, stat_coll, file_info_dic_from_path)
 
     for name, num in deal_file_dic.items():
@@ -141,4 +142,4 @@ if __name__ == '__main__':
         service_log_list = tool_util.read_stat_info(name, num)
         combine_service_stat(client, db_name, coll_name, func_name, service_log_list, name)
         stat_util.update_stat(mongo_writer, client, stat_db, stat_coll, name, num + len(service_log_list), file_modify_time)
-    print('-----')
+    logging.info(f'service stat load end')

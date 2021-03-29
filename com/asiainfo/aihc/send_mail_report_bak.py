@@ -12,6 +12,7 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 global roboter
+global logger
 
 
 class Conf:

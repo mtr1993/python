@@ -1,7 +1,6 @@
 # coding=utf-8
 
 import os
-import time
 import psycopg2
 import numpy
 import json as JSON
@@ -9,28 +8,21 @@ import datetime
 
 from jinja2 import Environment, FileSystemLoader
 
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from email.mime.image import MIMEImage
-from email.mime.base import MIMEBase
-from email import encoders
-
-from doc.document import Document
 from doc.chapter import Chapter
+from doc.document import Document
 
 from pyecharts import options as opts
 from pyecharts.charts import Grid, Line, Pie
-from pyecharts.globals import ThemeType
 from pyecharts.commons import utils
 from pyecharts.render import make_snapshot
 from snapshot_phantomjs import snapshot
-from publisher import *
 
 import paramiko
-import platform
+
+from publisher import ScriptExecutor, Publisher
 
 global roboter
+global logger
 
 
 class Conf:

@@ -28,11 +28,11 @@ def query(client, db_name, coll_name, start_time, end_time, period):
         speed = 0
     else:
         try:
-            speed = result_list[0].get("QueryCount") / result_list[0].get("QueryTimeCount") * 1000
+            speed = result_list[0].get("QueryCount") / period
         except Exception as e:
             logging.error(e)
             speed = 0
-    logging.info(f"speed : {speed} 秒/次")
+    logging.info(f"speed : {speed} 次/分钟")
     return speed
 
 

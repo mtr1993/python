@@ -1,0 +1,56 @@
+<h1>{{add_head}}</h1>
+<h2>主机明细总览</h2>
+<table border="1" style="background:white;font-size:15;border-radius:18px;border-collapse:collapse;" width ="1300px">
+            <thead>
+                <tr>
+                    <th style="text-align: left;background:#46A3FF;" colspan="12" tabindex="0">统计金额：{{date_cycle}}</th>
+                </tr>
+                <tr>
+                    <th style="text-align: center; " rowspan="2" tabindex="0">主机IP</th>
+                    <th style="text-align: center; " colspan="3" tabindex="0">平均统计</th>
+                    <th style="text-align: center; " colspan="2" tabindex="0">最大统计</th>
+                    <th style="text-align: center; " rowspan="2" tabindex="0">磁盘（%）</th>
+                    <th style="text-align: center; " rowspan="2" tabindex="0">成本（元）</th>
+                    <th style="text-align: center; " colspan="4" tabindex="0">主机服务信息</th>
+                </tr>
+                <tr>
+                    <th style="text-align: center; " rowspan="2" tabindex="0">应用数</th>
+                    <th style="text-align: center; " tabindex="0">CPU%</th>
+                    <th style="text-align: center; " tabindex="0">MEN%</th>
+                    <th style="text-align: center; " tabindex="0">CPU%</th>
+                    <th style="text-align: center; " tabindex="0">MEN%</th>
+                    <th style="text-align: center; " tabindex="0">用途</th>
+                    <th style="text-align: center; " tabindex="0">管理员</th>
+                    <th style="text-align: center; " tabindex="0">省份</th>
+                    <th style="text-align: center; " tabindex="0">CORE/MEM/DISK</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in hosts %}
+                <tr align='center'>
+                    <td style="background-color : #D8D8D8">{{item.ip}}</td>
+                    <td style="text-align: right;">{{item.avg_process}}</td>
+                    <td style="background-color : #{{item.bg_cpu}};text-align: right;">{{item.avg_cpu}}</td>
+                    <td style="background-color : #{{item.bg_memory}};text-align: right;">{{item.avg_memory}}</td>
+                    <td style="background-color : #{{item.bg_max_cpu}};text-align: right;">{{item.max_cpu}}</td>
+                    <td style="background-color : #{{item.bg_max_memory}};text-align: right;">{{item.max_memory}}</td>
+                    <td style="background-color : #{{item.bg_space}};text-align: right;">{{item.space_percent}}</td>
+                    <td style="text-align: right; ">{{item.cost}}</td>
+                    <td style="text-align: left;">{{item.usage}}</td>
+                    <td style="text-align: left;">{{item.manager}}</td>
+                    <td style="text-align: left;">{{item.area}}</td>
+                    <td style="text-align: left;">{{item.core}}C/{{item.memory}}G/{{item.space}}G</td>
+                </tr>
+                {% endfor%}
+            </tbody>
+            <thead>
+                <tr style="background:#46A3FF;">
+                    <th style="text-align: right; " colspan="7" tabindex="0">合计金额（元）</th>
+                    <th style="text-align: left; " colspan="7" tabindex="0">{{fee}}元/月</th>
+                </tr>
+            </thead>
+            </table>
+
+<h3>{{add_head}}主机明细信息下载<a href={{download_url}}>点击此处</a></h3>
+
+<br>--------------------------------------------------------------------------------------

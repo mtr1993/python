@@ -8,6 +8,7 @@ import json
 #                     # filename='/Users/mtr/PycharmProjects/mongoQuery/resource/log/load_stat_query.log',
 #                     filemode='a',
 #                     format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s')
+from asiainfo.mongoapp.tool import tool_util
 
 
 def query(client, db_name, coll_name, start_time, end_time, period):
@@ -47,7 +48,7 @@ if __name__ == '__main__':
     mongos_host = '10.19.85.33'
     mongos_port = 34000
     db_name = 'stat_redo_65'
-    coll_name = 'stat_xdr_in_20210107'
+    coll_name = 'stat_xdr_in_'+tool_util.get_date(0)
     time_period = -5
     end_time = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
     start_time = (datetime.datetime.now() + datetime.timedelta(minutes=time_period)).strftime('%Y%m%d%H%M%S')
